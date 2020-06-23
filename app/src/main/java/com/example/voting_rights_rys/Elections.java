@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -15,6 +16,14 @@ public class Elections extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elections);
+
+        //Get the Intent which started this activity (address string from Settings)
+        Intent intent = getIntent();
+        //Using the key to get the bundle (address)
+        String address = intent.getStringExtra(Settings.EXTRA_ADDRESS);
+        /**TEST THAT ADDRESS IS RECEIVED FROM SETTINGS*/
+        TextView textView = findViewById(R.id.addressTest);
+        textView.setText(address);
 
         //Initialize bottom nav bar and select "Elections"
         BottomNavigationView bottomNavView = findViewById(R.id.bot_nav);

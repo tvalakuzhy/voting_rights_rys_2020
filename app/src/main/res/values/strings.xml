@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Voting Right!</string>
+    <string name="address_hint">Address</string>
+    <string name="city_hint">City</string>
+    <string name="state_hint">State</string>
+    <string name="zip_hint">Zip</string>
+    <string name="save_button">Save</string>
 </resources>

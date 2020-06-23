@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Settings extends AppCompatActivity {
-
+    public static final String EXTRA_ADDRESS = "com.example.voting_rights_rys.ADDRESS";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,5 +45,26 @@ public class Settings extends AppCompatActivity {
                 return false;
             }
         });
+    }
+    //Called when submit button is clicked
+    public void sendAddress(View view){
+        //Create bind between Settings and Elections activities
+        Intent intent = new Intent(this, Elections.class);
+        //Extract address from EditText object
+        EditText address = (EditText) findViewById(R.id.editTextTextAddress);
+        EditText city = (EditText) findViewById(R.id.editTextTextCity);
+        EditText state = (EditText) findViewById(R.id.editTextTextState);
+        EditText zip = (EditText) findViewById(R.id.editTextTextZip);
+        //Convert EditText objects to String objects
+        String sAddress = address.getText().toString();
+        String sCity = city.getText().toString();
+        String sState = state.getText().toString();
+        String sZip = zip.getText().toString();
+        //Concatenate strings
+        String fullAddress = sAddress + sCity + sState + sZip;
+        //Add value of EditText to intent
+        intent.putExtra(EXTRA_ADDRESS, fullAddress);
+        //Starts the Elections activity and sends intent
+        startActivity(intent);
     }
 }

@@ -13,7 +13,8 @@
         app:layout_constraintBottom_toTopOf="@+id/bot_nav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bot_nav"
@@ -26,4 +27,69 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextAddress"
+        android:layout_width="323dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:ems="10"
+        android:hint="@string/address_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextCity"
+        android:layout_width="323dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:ems="10"
+        android:hint="@string/city_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextAddress" />
+
+    <EditText
+        android:id="@+id/editTextTextZip"
+        android:layout_width="140dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:ems="10"
+        android:hint="@string/zip_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextCity" />
+
+    <EditText
+        android:id="@+id/editTextTextState"
+        android:layout_width="140dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:ems="10"
+        android:hint="@string/state_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextZip"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextCity" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:onClick="sendAddress"
+        android:text="@string/save_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextZip" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
