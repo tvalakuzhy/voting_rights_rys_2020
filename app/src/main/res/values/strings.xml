@@ -5,4 +5,10 @@
     <string name="state_hint">State</string>
     <string name="zip_hint">Zip</string>
     <string name="save_button">Save</string>
+    <string name="resource_ID">Valid Forms of ID</string>
+    <string name="resource_voter_status">Registration Status</string>
+    <string name="resource_early_voting">Early Voting</string>
+    <string name="resource_iSideWith">iSideWith</string>
+    <string name="resource_register_to_vote">How to Register to Vote</string>
+    <string name="resource_absentee">Absentee Ballot</string>
 </resources>
