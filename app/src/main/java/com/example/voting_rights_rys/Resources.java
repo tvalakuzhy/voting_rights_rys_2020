@@ -2,15 +2,19 @@ package com.example.voting_rights_rys;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Resources extends AppCompatActivity {
+    private FrameLayout fragContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +24,9 @@ public class Resources extends AppCompatActivity {
         //Initialize bottom nav bar and select "Resources"
         BottomNavigationView bottomNavView = findViewById(R.id.bot_nav);
         bottomNavView.setSelectedItemId(R.id.resources);
+
+        //Initialize fragment container
+        fragContainer = (FrameLayout) findViewById(R.id.fragment_container);
 
         //Start a new activity when a nav bar item is selected
         bottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -71,5 +78,24 @@ public class Resources extends AppCompatActivity {
     //Called when button clicked
     public void howToRegisterToVote(View view){
         //Pull information from other sites and display in app using fragment (give credit to sources)
+        openFragment("register");
+
     }
+
+    // Opens Fragment
+    public void openFragment(String button) {
+        switch(button) {
+            case "register":
+                RegisterFragment frag = RegisterFragment.newInstance();
+                FragmentManager fManager = getSupportFragmentManager();
+                FragmentTransaction transaction = fManager.beginTransaction();
+                transaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_right,R.anim.enter_from_right,R.anim.exit_to_right);
+                transaction.addToBackStack(null);
+                transaction.add(R.id.fragment_container, frag,"REGISTER_FRAGMENT").commit();
+                break;
+        }
+    }
+
+
+
 }
