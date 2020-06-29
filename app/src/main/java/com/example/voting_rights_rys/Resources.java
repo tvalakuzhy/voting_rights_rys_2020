@@ -25,7 +25,7 @@ import java.util.HashMap;
 public class Resources extends AppCompatActivity {
     private FrameLayout fragContainer;
     private HashMap <String, ArrayList<Object>> states = new HashMap<>();
-    private String userState = "south dakota"; // should be all lower case, get this from settings page
+    private String userState = "california"; // should be all lower case, get this from settings page
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

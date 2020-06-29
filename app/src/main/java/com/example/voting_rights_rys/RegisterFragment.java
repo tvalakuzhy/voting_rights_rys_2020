@@ -1,12 +1,11 @@
 package com.example.voting_rights_rys;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +53,6 @@ public class RegisterFragment extends Fragment {
             abbv.setText(String.format(getString(R.string.register_tag), initials));
         }
 
-
         // Recycler view initialization
         rView = view.findViewById(R.id.register_list);
 
@@ -68,16 +66,13 @@ public class RegisterFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String url = "https://vote.gov/register/" + initials.toLowerCase();
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                startActivity(browserIntent);
+                CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+                CustomTabsIntent customTabsIntent = builder.build();
+                customTabsIntent.launchUrl(getActivity(), Uri.parse(url));
             }
         });
 
         // Inflate the layout for this fragment
         return view;
     }
-
-
-
-
 }
