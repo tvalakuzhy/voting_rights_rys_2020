@@ -1,0 +1,626 @@
+{
+   "states":[
+      {
+         "name":"Alabama",
+         "registration_needed":true,
+         "abbr":"AL",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Alabama and your county at the time of registration",
+            "be 18 years old before any election",
+            "not have been convicted of a disqualifying felony",
+            "not currently be declared mentally incompetent through a competency hearing",
+            "swear or affirm to \" support and defend the Constitution of the US and the State of Alabama and further disavow any belief or affiliation with any group which advocates the overthrow of the governments of the US or the State of Alabama by unlawful means and that the information contained herein is true, so help me God.\""
+         ]
+      },
+      {
+         "name":"Alaska",
+         "registration_needed":true,
+         "abbr":"AK",
+         "rules":[
+            "be a citizen of the United States",
+            "be at least 18 years old within 90 days of completing your registration",
+            "be a resident of Alaska",
+            "not be a convicted felon (unless unconditionally discharged)",
+            "not be registered to vote in another state"
+         ]
+      },
+      {
+         "name":"Arizona",
+         "registration_needed":true,
+         "abbr":"AZ",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Arizona and your county at least 29 days preceding the next election",
+            "be 18 years old on or before the next general election",
+            "be able to write your name or mark, unless prevented from so doing by physical disability",
+            "not have been convicted of treason or a felony (or have had your civil rights restored)",
+            "not currently be declared an incapacitated person by a court of law"
+         ]
+      },
+      {
+         "name":"Arkansas",
+         "registration_needed":true,
+         "abbr":"AR",
+         "rules":[
+            "be a citizen of the United States",
+            "live in Arkansas at the address in Box 2 on the application",
+            "be at least 18 years old before the next election",
+            "not be a convicted felon (or have completely discharged your sentence or been pardoned)",
+            "not claim the right to vote in any other jurisdiction",
+            "not previously be adjudged mentally incompetent by a court of competent jurisdiction"
+         ]
+      },
+      {
+         "name":"California",
+         "registration_needed":true,
+         "abbr":"CA",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of California",
+            "be at least 18 years of age at the time of the next election",
+            "not be imprisoned or on parole for the conviction of a felony",
+            "not currently be judged mentally incompetent by a court of law"
+         ]
+      },
+      {
+         "name":"Colorado",
+         "registration_needed":true,
+         "abbr":"CO",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Colorado 22 days prior to Election Day",
+            "be 18 years old on or before Election Day",
+            "not be serving a sentence of detention, confinement, or parole for a felony conviction"
+         ]
+      },
+      {
+         "name":"Connecticut",
+         "registration_needed":true,
+         "abbr":"CT",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Connecticut and of the town in which you wish to vote",
+            "be at least 18 years old on the next election",
+            "have completed confinement and parole if previously convicted of a felony"
+         ]
+      },
+      {
+         "name":"Delaware",
+         "registration_needed":true,
+         "abbr":"DE",
+         "rules":[
+            "be a citizen of the United States",
+            "be a permanent resident of Delaware",
+            "be at least 18 years old on the date of the next general election",
+            "not be mentally incompetent",
+            "if you are a felon, you are eligible to vote as long as you have served your sentence (including parole) and your convictions were not for disqualifying felonies: murder and manslaughter (except vehicular homicide), sexual offenses, or crimes against public administration involving bribery or improper influence or abuse of office"
+         ]
+      },
+      {
+         "name":"District Of Columbia",
+         "registration_needed":true,
+         "abbr":"DC",
+         "rules":[
+            "be a citizen of the United States",
+            "be a District of Columbia resident at least 30 days preceding the next election",
+            "be at least 18 years old on or preceding the next general election",
+            "not be in prison for a felony conviction",
+            "not have been judged legally incompetent by a court of law",
+            "not claim the right to vote anywhere outside DC"
+         ]
+      },
+      {
+         "name":"Florida",
+         "registration_needed":true,
+         "abbr":"FL",
+         "rules":[
+            "be a citizen of the United States",
+            "be a legal resident of both the State of Florida and of the county in which you seek to be registered",
+            "be 18 years old (you may pre‑register if you are at least 16)",
+            "not be adjudicated mentally incapacitated with respect to voting in Florida or any other State, or if you have, you must first have your voting rights restored",
+            "not be a convicted felon, or if you are, you must first have your civil rights restored if they were taken away",
+            "swear or affirm the following \" I will protect and defend the Constitution of the United States and the Constitution of the State of Florida, that I am qualified to register as an elector under the Constitution and laws of the State of Florida, and that all information in this application is true.\""
+         ]
+      },
+      {
+         "name":"Georgia",
+         "registration_needed":true,
+         "abbr":"GA",
+         "rules":[
+            "be a citizen of the United States",
+            "be a legal resident of Georgia and of the county in which you want to vote",
+            "be at least 18 years old within six months after the day of registration, and be 18 years old to vote",
+            "not be serving a sentence for having been convicted of a felony involving moral turpitude",
+            "not have been judicially determined to be mentally incompetent, unless the disability has been removed"
+         ]
+      },
+      {
+         "name":"Hawaii",
+         "registration_needed":true,
+         "abbr":"HI",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of the State of Hawaii",
+            "be at least 16 years old (you must be 18 years old by Election Day in order to vote)",
+            "not be incarcerated for a felony conviction",
+            "not be adjudicated by a court as \" non compos mentis.\""
+         ]
+      },
+      {
+         "name":"Idaho",
+         "registration_needed":true,
+         "abbr":"ID",
+         "rules":[
+            "be a citizen of the United States",
+            "be at least 18 years old",
+            "have resided in Idaho and in the county for 30 days prior to the day of election",
+            "not be serving a sentence of imprisonment for a felony. Your voting rights are restored once you have completed your sentence, probation, and parole"
+         ]
+      },
+      {
+         "name":"Illinois",
+         "registration_needed":true,
+         "abbr":"IL",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Illinois and of your election precinct at least 30 days before the next election",
+            "be at least 18 years old on or before the next election",
+            "not be in jail for a felony conviction (but you can vote if you have completed your sentence)",
+            "not claim the right to vote anywhere else"
+         ]
+      },
+      {
+         "name":"Indiana",
+         "registration_needed":true,
+         "abbr":"IN",
+         "rules":[
+            "be a citizen of the United States",
+            "have resided in the precinct at least 30 days before the next election",
+            "be at least 18 years of age on the day of the next general election",
+            "not currently be incarcerated for a criminal conviction"
+         ]
+      },
+      {
+         "name":"Iowa",
+         "registration_needed":true,
+         "abbr":"IA",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Iowa",
+            "be at least 17 years old (you must be 18 to vote)",
+            "not have been convicted of a felony (or have had your rights restored)",
+            "not currently be judged by a court to be \" incompetent to vote.\"",
+            "not claim the right to vote in more than one place"
+         ]
+      },
+      {
+         "name":"Kansas",
+         "registration_needed":true,
+         "abbr":"KS",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Kansas",
+            "be 18 by the next election",
+            "have completed the terms of your sentence if convicted of a felony and recieved a certificate of discharge; a person serving a sentence for a felony conviction is ineligible to vote",
+            "not claim the right to vote in any other location or under any other name"
+         ]
+      },
+      {
+         "name":"Kentucky",
+         "registration_needed":true,
+         "abbr":"KY",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Kentucky for at least 28 days before to Election Day",
+            "be 18 years of age on or before the next general election",
+            "not be a convicted felon or if you have been convicted of a felony, your civil rights must have been restored by executive pardon",
+            "not have been judged \" mentally incompetent\" in a court of law",
+            "not claim the right to vote anywhere outside Kentucky"
+         ]
+      },
+      {
+         "name":"Louisiana",
+         "registration_needed":true,
+         "abbr":"LA",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Louisiana (Residence address must be address where you claim homestead exemption, if any, except for a resident in a nursing home or veteran’s home who may select to use the address of the nursing home or veterans’ home or the home where he has a homestead exemption. A college student may elect to use his home address or his address while away at school.)",
+            "be at least 17 years old (16 years old if registering in person at the Registrar of Voters Office or at the Louisiana Office of Motor Vehicles), and be 18 years old prior to the next election to vote",
+            "not currently be under an order of imprisonment for conviction of a felony. (If you are under an order but have not been incarcerated within the last five years, you ARE eligible to vote unless your conviction was for election fraud.)",
+            "not currently be under a judgment of interdiction for mental incompetence"
+         ]
+      },
+      {
+         "name":"Maine",
+         "registration_needed":true,
+         "abbr":"ME",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Maine and the municipality in which you want to vote",
+            "be 17 years old (you must be at least 18 years of age to vote, except that in primary elections you may vote if you are 17 but will be 18 by the general election)"
+         ]
+      },
+      {
+         "name":"Maryland",
+         "registration_needed":true,
+         "abbr":"MD",
+         "rules":[
+            "be a citizen of the United States",
+            "be a Maryland resident",
+            "be at least 18 years old by the next general election",
+            "not be under guardianship for mental disability",
+            "not have been convicted of buying or selling votes",
+            "not have been convicted of a felony, or if you have, have completed serving a court ordered sentence of imprisonment"
+         ]
+      },
+      {
+         "name":"Massachusetts",
+         "registration_needed":true,
+         "abbr":"MA",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Massachusetts",
+            "be 18 years old on or before the next election",
+            "not have been convicted of corrupt practices in respect to elections",
+            "not be under guardianship with respect to voting",
+            "not be currently incarcerated for a felony conviction"
+         ]
+      },
+      {
+         "name":"Michigan",
+         "registration_needed":true,
+         "abbr":"MI",
+         "rules":[
+            "be a citizen of the United States",
+            "be 18 years old by the next election",
+            "be a resident of Michigan and at least a 30 day resident of your city or township by Election Day",
+            "not be confined in a jail after being convicted and sentenced"
+         ]
+      },
+      {
+         "name":"Minnesota",
+         "registration_needed":true,
+         "abbr":"MN",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Minnesota for 20 days before the next election",
+            "maintain residence at the address given on the registration form",
+            "be at least 18 years old on Election Day",
+            "if previously convicted of a felony, have completed or been discharged from your sentence",
+            "not be under a court‑ordered guardianship in which the right to vote has been revoked",
+            "not be found by a court to be legally incompetent to vote"
+         ]
+      },
+      {
+         "name":"Mississippi",
+         "registration_needed":true,
+         "abbr":"MS",
+         "rules":[
+            "be a citizen of the United States",
+            "have lived in Mississippi and in your county (and city, if applicable) 30 days before Election Day",
+            "be 18 years old by the time of the general election in which you want to vote",
+            "have not been convicted of voter fraud, murder, rape, bribery, theft, arson, obtaining money or goods under false pretense, perjury, forgery, embezzlement, bigamy, armed robbery, extortion, felony bad check, felony shoplifting, larceny, receiving stolen property, robbery, timber larceny, unlawful taking of a motor vehicle, statutory rape, carjacking, or larceny under lease or rental agreement, or have had your rights restored as required by law",
+            "not have been declared mentally incompetent by a court"
+         ]
+      },
+      {
+         "name":"Missouri",
+         "registration_needed":true,
+         "abbr":"MO",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Missouri",
+            "be at least 17‑1/2 years of age (you must be 18 to vote)",
+            "not be on probation or parole after conviction of a felony, until finally discharged from such probation or parole",
+            "not be convicted of a felony or misdemeanor connected with the right of suffrage",
+            "not be adjudged incapacitated by any court of law",
+            "not be confined under a sentence of imprisonment"
+         ]
+      },
+      {
+         "name":"Montana",
+         "registration_needed":true,
+         "abbr":"MT",
+         "rules":[
+            "be a citizen of the United States",
+            "be at least 18 years old on or before Election Day",
+            "be a resident of Montana and of the county in which you want to vote for at least 30 days before the next election",
+            "not be in a penal institution for a felony conviction",
+            "not currently be determined by a court to be of unsound mind",
+            "meet these qualifications by the next Election Day if you do not currently meet them"
+         ]
+      },
+      {
+         "name":"Nebraska",
+         "registration_needed":true,
+         "abbr":"NE",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Nebraska",
+            "be at least 18 years of age or will be 18 years of age on or before the first Tuesday after the first Monday of November",
+            "not have been convicted of a felony, or if convicted, two years have passed since the sentence was completed (including any parole)",
+            "not have been officially found to be mentally incompetent",
+            "not have been convicted of treason, unless you have had your civil rights stored."
+         ]
+      },
+      {
+         "name":"Nevada",
+         "registration_needed":true,
+         "abbr":"NV",
+         "rules":[
+            "be a citizen of the United States",
+            "have attained the age of 18 years on the date of the next election",
+            "have continuously resided in the State of Nevada, in your county, at least 30 days and in your precinct at least 10 days before the next election",
+            "not currently be serving a term of imprisonment for a felony conviction",
+            "not be determined by a court of law to be mentally incompetent",
+            "claim no other place as your legal residence"
+         ]
+      },
+      {
+         "name":"New Hampshire",
+         "registration_needed":true,
+         "abbr":"NH",
+         "rules":[
+            "be a citizen of the United States",
+            "Be 18 years of age or older on Election Day",
+            "Register to vote only in the town or ward in which you actually live",
+            "Not have been convicted of a felony, unless you are past your final discharge",
+            "Not have been ever convicted of bribery or intimidation relating to elections"
+         ]
+      },
+      {
+         "name":"New Jersey",
+         "registration_needed":true,
+         "abbr":"NJ",
+         "rules":[
+            "be a citizen of the United States",
+            "be at least 17 years of age; you may register to vote if you are at least 17 years old but cannot vote until reaching the age of 18",
+            "be a resident of NJ and your county and at your address at least 30 days before the next election",
+            "not be serving a sentence or on parole or probation as the result of a conviction of any indictable offense under the laws of this or another state or of the United States",
+            "not be declared mentally incompetent by a court"
+         ]
+      },
+      {
+         "name":"New Mexico",
+         "registration_needed":true,
+         "abbr":"NM",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of the State of New Mexico",
+            "be 18 years of age at the time of the next election",
+            "not have been denied the right to vote by a court of law by reason of mental incapacity",
+            "not be currently incarcerated or serving parole or supervised probation for a felony conviction (or if you have been convicted of a felony, have completed all the terms and conditions of sentencing, have been granted a pardon by the Governor, or have had your conviction overturned on appeal)"
+         ]
+      },
+      {
+         "name":"New York",
+         "registration_needed":true,
+         "abbr":"NY",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of New York and the county, city, or village for at least 30 days before Election Day",
+            "16- and 17-year-olds may preregister to vote, but cannot vote until they are 18",
+            "not be in prison or on parole for a felony conviction (unless parolee pardoned or restored rights of citizenship)",
+            "not currently be judged incompetent by a court",
+            "not claim the right to vote elsewhere"
+         ]
+      },
+      {
+         "name":"North Carolina",
+         "registration_needed":true,
+         "abbr":"NC",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of North Carolina and the precinct in which you live for at least 30 days prior to Election Day",
+            "16- and 17-year-olds may preregister to vote, but cannot vote until they are 18 (17-year-olds may vote in a primary election if they will be 18 at the time of the general election)",
+            "not be currently serving a felony sentence, including probation, parole, or post-release supervision"
+         ]
+      },
+      {
+         "name":"North Dakota",
+         "registration_needed":false,
+         "abbr":"ND",
+         "rules":[
+            "be a citizen of the United States",
+            "be at least 18 years old on the day of election",
+            "be a resident of North Dakota",
+            "reside in the precinct for 30 days preceding Election Day",
+            "be able to provide a drivers license, non-driver identification card or other approved form of identification"
+         ]
+      },
+      {
+         "name":"Ohio",
+         "registration_needed":true,
+         "abbr":"OH",
+         "rules":[
+            "be a citizen of the United States",
+            "be at least 18 years old on or before the next general election",
+            "be a resident of Ohio for at least 30 days immediately before the election in which you want to vote",
+            "not be currently incarcerated (in jail or prison) for a felony conviction. If you are an ex-felon and not currently incarcerated, you are eligible to vote in Ohio but you MUST re-register.",
+            "not have been declared incompetent for voting purposes by a probate court",
+            "not have been permanently denied the right to vote for violations of election laws."
+         ]
+      },
+      {
+         "name":"Oklahoma",
+         "registration_needed":true,
+         "abbr":"OK",
+         "rules":[
+            "be a citizen of the United States",
+            "be 18 years old on or before the date of the next election",
+            "be a \"bona fide\" resident of the State of Oklahoma (A person is a \"bona fide\" resident of the State of Oklahoma if he or she has an \"honest intent to make a place one’s residence or domicile, a conscious decision to make a location an individual’s home.\")",
+            "have not been convicted of a felony and not completed the sentence including any term of incarceration, parole or supervision, or probation",
+            "not now be under judgment as an incapacitated person, or a partially incapacitated person prohibited from voting"
+         ]
+      },
+      {
+         "name":"Oregon",
+         "registration_needed":true,
+         "abbr":"OR",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Oregon",
+            "at least 16 years old (to vote, you must be 18 by Election Day)"
+         ]
+      },
+      {
+         "name":"Pennsylvania",
+         "registration_needed":true,
+         "abbr":"PA",
+         "rules":[
+            "be a citizen of the United States at least one month before the next election",
+            "be a resident of Pennsylvania and your election district at least 30 days before Election Day",
+            "be at least 18 years of age on the day of the next election",
+            "not be incarcerated after conviction for a felony (your voting rights are restored immediately after incarceration)",
+            "not have been convicted of violating any provision of the Pennsylvania Election Code within the last four years"
+         ]
+      },
+      {
+         "name":"Rhode Island",
+         "registration_needed":true,
+         "abbr":"RI",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Rhode Island for 30 days preceding the next election",
+            "16- and 17-year-olds may preregister to vote, but cannot vote until they are 18",
+            "not be currently incarcerated in a correctional facility due to a felony conviction",
+            "not have been lawfully judged to be mentally incompetent"
+         ]
+      },
+      {
+         "name":"South Carolina",
+         "registration_needed":true,
+         "abbr":"SC",
+         "rules":[
+            "be a citizen of the United States",
+            "be at least 18 years old on or before the next election",
+            "be a resident of South Carolina, and live in the county and precinct where you are registering",
+            "not be confined in any public prison resulting from a conviction of a crime",
+            "never have been convicted of a felony or offense against Election Day laws, or if previously convicted, have served your entire sentence, including probation or parole, or have received a pardon for the conviction",
+            "not be under a court order declaring you mentally incompetent"
+         ]
+      },
+      {
+         "name":"South Dakota",
+         "registration_needed":true,
+         "abbr":"SD",
+         "rules":[
+            "be a citizen of the United States",
+            "reside in South Dakota",
+            "be 18 years old by the next election",
+            "not be currently serving a sentence for a felony conviction which included imprisonment, served or suspended, in an adult penitentiary system",
+            "not have been adjudged mentally incompetent by a court"
+         ]
+      },
+      {
+         "name":"Tennessee",
+         "registration_needed":true,
+         "abbr":"TN",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Tennessee",
+            "be at least 18 years old on or before the next election",
+            "not have been convicted of a felony, or if convicted, have had your full rights of citizenship restored (or have received a pardon)",
+            "not be adjudicated incompetent by a court of competent jurisdiction (or have been restored to legal capacity"
+         ]
+      },
+      {
+         "name":"Texas",
+         "registration_needed":true,
+         "abbr":"TX",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of the county in which the application for registration is made",
+            "be at least 17 years and 10 months old (you must be 18 to vote)",
+            "not be convicted of a felony",
+            "if a convicted felon, you must have fully discharged your punishment, including any incarceration, parole, supervision, period of probation, or be pardoned",
+            "have not been declared mentally incompetent by final judgment of a court of law"
+         ]
+      },
+      {
+         "name":"Utah",
+         "registration_needed":true,
+         "abbr":"UT",
+         "rules":[
+            "be a citizen of the United States",
+            "have resided in Utah for 30 days immediately before the next election",
+            "16- and 17-year-olds may preregister to vote, but cannot vote until they are 18",
+            "not be a convicted felon currently incarcerated for commission of a felony until your right to vote is restored",
+            "not be convicted of treason or crime against the elective franchise, unless restored to civil rights",
+            "not be found to be mentally incompetent by a court of law"
+         ]
+      },
+      {
+         "name":"Vermont",
+         "registration_needed":true,
+         "abbr":"VT",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Vermont",
+            "be 18 years of age on or before Election Day",
+            "have taken the following Oath: You solemnly swear (or affirm) that whenever you give your vote or suffrage, touching any matter that concerns the state of Vermont, you will do it so as in your conscience you shall judge will most conduce to the best good of the same, as established by the Constitution, without fear or favor of any person [Voter’s Oath, Vermont Constitution, Chapter II, Section 42]"
+         ]
+      },
+      {
+         "name":"Virginia",
+         "registration_needed":true,
+         "abbr":"VA",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Virginia and of the precinct in which you want to vote",
+            "be 18 years old by the next general election",
+            "not have been convicted of a felony, unless you have had your civil rights restored",
+            "not currently be declared incapacitated by a court."
+         ]
+      },
+      {
+         "name":"Washington",
+         "registration_needed":true,
+         "abbr":"WA",
+         "rules":[
+            "be a citizen of the United States",
+            "be at least 18 years old by Election Day",
+            "be a legal resident of Washington State, your county, and precinct for 30 days immediately preceding Election Day",
+            "not be disqualified from voting due to a court order",
+            "not be under Department of Corrections supervision for a Washington felony conviction."
+         ]
+      },
+      {
+         "name":"West Virginia",
+         "registration_needed":true,
+         "abbr":"WV",
+         "rules":[
+            "be a citizen of the United States",
+            "live in West Virginia in the county in which you are registering",
+            "be at least 17 years old and turning 18 before the next general election",
+            "not be under conviction, probation, or parole for a felony, treason, or election bribery",
+            "not have been judged “mentally incompetent” in a court of competent jurisdiction"
+         ]
+      },
+      {
+         "name":"Wisconsin",
+         "registration_needed":true,
+         "abbr":"WI",
+         "rules":[
+            "be a citizen of the United States",
+            "be a resident of Wisconsin for at least 10 days",
+            "be 18 years old",
+            "not have been convicted of treason, felony or bribery, or if you have, your civil rights have been restored",
+            "not be incapable of understanding the objective of the elective process or under guardianship"
+         ]
+      },
+      {
+         "name":"Wyoming",
+         "registration_needed":true,
+         "abbr":"WY",
+         "rules":[
+            "be a citizen of the United States",
+            "be 18 years old by General Election Day",
+            "be a resident of the State of Wyoming",
+            "not be currently adjudicated mentally incompetent",
+            "not have been convicted of a felony, or if convicted have had your voting rights restored"
+         ]
+      }
+   ]
+}

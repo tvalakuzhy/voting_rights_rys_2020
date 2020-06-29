@@ -13,8 +13,19 @@ import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Resources extends AppCompatActivity {
     private FrameLayout fragContainer;
+    private HashMap <String, ArrayList<Object>> states = new HashMap<>();
+    private String userState = "new york"; // should be all lower case, get this from settings page
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +38,9 @@ public class Resources extends AppCompatActivity {
 
         //Initialize fragment container
         fragContainer = (FrameLayout) findViewById(R.id.fragment_container);
+
+        // Parse Json data for how to register
+        loadJSONFromAsset(); parseJSON();
 
         //Start a new activity when a nav bar item is selected
         bottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -79,7 +93,6 @@ public class Resources extends AppCompatActivity {
     public void howToRegisterToVote(View view){
         //Pull information from other sites and display in app using fragment (give credit to sources)
         openFragment("register");
-
     }
 
     // Opens Fragment
@@ -87,6 +100,16 @@ public class Resources extends AppCompatActivity {
         switch(button) {
             case "register":
                 RegisterFragment frag = RegisterFragment.newInstance();
+                // get state info from map and pass it to fragment to display
+                ArrayList <Object> stateInfo = states.get(userState);
+                Bundle args = new Bundle();
+                args.putString("stateName", (String)stateInfo.get(0));
+                args.putString("abbv", (String)stateInfo.get(1));
+                args.putStringArray("info", (String[]) stateInfo.get(2));
+
+//                 rules + reg bool
+                frag.setArguments(args);
+
                 FragmentManager fManager = getSupportFragmentManager();
                 FragmentTransaction transaction = fManager.beginTransaction();
                 transaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_right,R.anim.enter_from_right,R.anim.exit_to_right);
@@ -96,6 +119,56 @@ public class Resources extends AppCompatActivity {
         }
     }
 
+    // loads JSON file and parses data for How to Register to vote page
+    public String loadJSONFromAsset() {
+        String json = null;
+        try {
+            InputStream is = getAssets().open("state-info.JSON");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
 
+    public void parseJSON() {
+        try {
+            JSONObject obj = new JSONObject(loadJSONFromAsset());
+            JSONArray arr = obj.getJSONArray("states");
 
+            for (int i = 0; i < arr.length(); i++) {
+                JSONObject jObj = arr.getJSONObject(i);
+                ArrayList<Object> stateInfo = new ArrayList<>();
+                String [] rules;
+
+                // add state name
+                stateInfo.add(jObj.getString("name"));
+
+                // get state abbv
+                stateInfo.add(jObj.getString("abbr"));
+
+                // get state reqs
+                JSONArray rulesArr = jObj.getJSONArray("rules");
+
+                rules = new String [rulesArr.length()];
+                for (int r = 0; r < rulesArr.length(); r++) {
+                    rules[r] = rulesArr.getString(r);
+                }
+                stateInfo.add(rules);
+
+                // get registration needed
+                stateInfo.add(jObj.getBoolean("registration_needed"));
+
+                // add to hashMap "state":info
+                states.put(jObj.getString("name").toLowerCase(), stateInfo);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
 }
