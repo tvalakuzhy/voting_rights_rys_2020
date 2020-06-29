@@ -1,5 +1,7 @@
 package com.example.voting_rights_rys;
 
+import android.graphics.text.LineBreaker;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,19 +40,9 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.ViewHo
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             reqLine = (TextView)itemView.findViewById(R.id.item_text);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                reqLine.setJustificationMode(LineBreaker.JUSTIFICATION_MODE_INTER_WORD);
+            }
         }
     }
-
-//    private class ListViewHolder extends RecyclerView.ViewHolder {
-//        private TextView reqLine;
-//
-//        public ListViewHolder( View itemView) {
-//            super(itemView);
-//            reqLine = (TextView)itemView.findViewById(R.id.item_text);
-//        }
-//
-//        public void bindView (int index) {
-//            reqLine.setText();
-//        }
-//    }
 }

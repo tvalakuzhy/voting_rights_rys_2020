@@ -25,7 +25,7 @@ import java.util.HashMap;
 public class Resources extends AppCompatActivity {
     private FrameLayout fragContainer;
     private HashMap <String, ArrayList<Object>> states = new HashMap<>();
-    private String userState = "new york"; // should be all lower case, get this from settings page
+    private String userState = "south dakota"; // should be all lower case, get this from settings page
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class Resources extends AppCompatActivity {
         // Parse Json data for how to register
         loadJSONFromAsset(); parseJSON();
 
-        //Start a new activity when a nav bar item is selected
+        // Start a new activity when a nav bar item is selected
         bottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -106,8 +106,7 @@ public class Resources extends AppCompatActivity {
                 args.putString("stateName", (String)stateInfo.get(0));
                 args.putString("abbv", (String)stateInfo.get(1));
                 args.putStringArray("info", (String[]) stateInfo.get(2));
-
-//                 rules + reg bool
+                args.putBoolean("regNeeded", (Boolean) stateInfo.get(3));
                 frag.setArguments(args);
 
                 FragmentManager fManager = getSupportFragmentManager();
