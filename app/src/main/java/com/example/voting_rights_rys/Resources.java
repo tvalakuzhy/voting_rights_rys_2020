@@ -2,10 +2,12 @@ package com.example.voting_rights_rys;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,6 +28,9 @@ public class Resources extends AppCompatActivity {
     private FrameLayout fragContainer;
     private HashMap <String, ArrayList<Object>> states = new HashMap<>();
     private String userState = "california"; // should be all lower case, get this from settings page
+    // Opens links within app
+    CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+    CustomTabsIntent customTabsIntent = builder.build();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,11 +76,15 @@ public class Resources extends AppCompatActivity {
         /**Note: Still give option to see valid forms of id for other states as it will vary
          * using a drop down menu*/
         //Show the user the valid forms of ID for his/her state
+        String url = ((String [])(states.get(userState).get(4)))[1];
+        customTabsIntent.launchUrl(this, Uri.parse(url));
     }
     //Called when button clicked
     public void voterRegistrationStatus(View view){
         //Use an API to automatically check user's registration status if possible
         //Alternative: provide user with directions on how to check voter registration status
+        String url = ((String [])(states.get(userState).get(4)))[0];
+        customTabsIntent.launchUrl(this, Uri.parse(url));
     }
     //Called when button clicked
     public void absenteeBallot(View view){
@@ -144,6 +153,7 @@ public class Resources extends AppCompatActivity {
                 JSONObject jObj = arr.getJSONObject(i);
                 ArrayList<Object> stateInfo = new ArrayList<>();
                 String [] rules;
+                String [] links;
 
                 // add state name
                 stateInfo.add(jObj.getString("name"));
@@ -162,6 +172,14 @@ public class Resources extends AppCompatActivity {
 
                 // get registration needed
                 stateInfo.add(jObj.getBoolean("registration_needed"));
+
+                // add links
+                JSONArray linksArr = jObj.getJSONArray("links");
+                links = new String [linksArr.length()];
+                for (int l= 0; l < linksArr.length(); l++) {
+                    links[l] = linksArr.getString(l);
+                }
+                stateInfo.add(links);
 
                 // add to hashMap "state":info
                 states.put(jObj.getString("name").toLowerCase(), stateInfo);
