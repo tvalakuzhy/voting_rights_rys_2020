@@ -28,7 +28,9 @@
         app:menu="@menu/menu_navigation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:stateListAnimator="@null"
+        />
 
     <Button
         android:id="@+id/button2"
@@ -40,7 +42,9 @@
         android:onClick="validID"
         android:text="@string/resource_ID"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:stateListAnimator="@null"
+        />
 
     <Button
         android:id="@+id/button5"
@@ -52,7 +56,9 @@
         android:onClick="iSideWith"
         android:text="@string/resource_iSideWith"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        android:stateListAnimator="@null"
+        />
 
     <Button
         android:id="@+id/button7"
@@ -64,7 +70,9 @@
         android:onClick="voterRegistrationStatus"
         android:text="@string/resource_voter_status"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        android:stateListAnimator="@null"
+        />
 
     <Button
         android:id="@+id/button4"
@@ -80,7 +88,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:stateListAnimator="@null"
+        />
 
     <Button
         android:id="@+id/button6"
@@ -94,7 +104,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        android:stateListAnimator="@null"
+        />
 
     <Button
         android:id="@+id/button8"
@@ -108,6 +120,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/button6"
+        android:stateListAnimator="@null"
+        />
+    
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

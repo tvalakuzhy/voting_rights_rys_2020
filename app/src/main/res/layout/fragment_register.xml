@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".RegisterFragment"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/state_name"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:letterSpacing="0.15"
+            android:text="@string/register_state"
+            android:textColor="#80909A"
+            android:textSize="30sp"
+            />
+
+
+        <TextView
+            android:id="@+id/require_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register_tag"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_list"
+            android:layout_marginTop="20dp"
+            />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/round_button"
+            android:text="@string/register_button"
+            android:textAllCaps="false"
+            android:textColor="#727D8F"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="70dp"
+            />
+    </LinearLayout>
+
+</ScrollView>
