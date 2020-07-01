@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.browser.customtabs.CustomTabsIntent;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -85,9 +87,14 @@ public class Resources extends AppCompatActivity {
     public void earlyVoting(View view){
         //Pull information from other sites and display in app using fragment (give credit to sources)
     }
-    //Called when button clicked
+    //Called when button clicked - Redirects to in app browser which displays website
     public void iSideWith(View view){
-        //Redirects to in app browser which displays website
+        //Website url
+        String url = "https://www.isidewith.com/";
+        //Create a builder to create the customTabsIntent
+        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+        CustomTabsIntent customTabsIntent = builder.build();
+        customTabsIntent.launchUrl(this, Uri.parse(url));
     }
     //Called when button clicked
     public void howToRegisterToVote(View view){
