@@ -100,8 +100,6 @@ public class Resources extends AppCompatActivity {
         //Website url
         String url = "https://www.isidewith.com/";
         //Create a builder to create the customTabsIntent
-        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-        CustomTabsIntent customTabsIntent = builder.build();
         customTabsIntent.launchUrl(this, Uri.parse(url));
     }
     //Called when button clicked
