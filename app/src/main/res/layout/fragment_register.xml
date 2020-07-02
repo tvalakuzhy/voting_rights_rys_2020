@@ -25,7 +25,6 @@ android:layout_height="wrap_content">
             android:textSize="30sp"
             />
 
-
         <TextView
             android:id="@+id/require_tag"
             android:layout_width="match_parent"
