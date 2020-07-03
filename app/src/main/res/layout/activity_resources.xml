@@ -50,6 +50,15 @@
             android:textColor="@color/buttonText"
             android:textSize="16dp"
             />
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="11sp"
+            android:text="@string/ID_text"
+            android:textColor="@color/resDescription"
+            />
 
         <Button
             android:id="@+id/button2"
@@ -62,11 +71,18 @@
             android:textColor="@color/buttonText"
             android:stateListAnimator="@null"
             android:fontFamily="sans-serif"
-            android:layout_marginTop="30dp"
             android:padding="15dp"
             android:textSize="16dp"
             />
-
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="11sp"
+            android:text="@string/Reg_text"
+            android:textColor="@color/resDescription"
+            />
         <Button
             android:id="@+id/button3"
             android:layout_width="300dp"
@@ -78,11 +94,18 @@
             android:textColor="@color/buttonText"
             android:stateListAnimator="@null"
             android:fontFamily="sans-serif"
-            android:layout_marginTop="30dp"
             android:padding="15dp"
             android:textSize="16dp"
             />
-
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="11sp"
+            android:text="@string/Early_text"
+            android:textColor="@color/resDescription"
+            />
         <Button
             android:id="@+id/button4"
             android:layout_width="300dp"
@@ -94,9 +117,17 @@
             android:textColor="@color/buttonText"
             android:stateListAnimator="@null"
             android:fontFamily="sans-serif"
-            android:layout_marginTop="30dp"
             android:padding="15dp"
             android:textSize="16dp"
+            />
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="11sp"
+            android:text="@string/Absentee_text"
+            android:textColor="@color/resDescription"
             />
         <Button
             android:id="@+id/button5"
@@ -109,11 +140,18 @@
             android:textColor="@color/buttonText"
             android:stateListAnimator="@null"
             android:fontFamily="sans-serif"
-            android:layout_marginTop="30dp"
             android:padding="15dp"
             android:textSize="16dp"
             />
-
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="11sp"
+            android:text="@string/Status_text"
+            android:textColor="@color/resDescription"
+            />
         <Button
             android:id="@+id/button6"
             android:layout_width="300dp"
@@ -125,9 +163,17 @@
             android:textColor="@color/buttonText"
             android:stateListAnimator="@null"
             android:fontFamily="sans-serif"
-            android:layout_marginTop="30dp"
             android:padding="15dp"
             android:textSize="16dp"
+            />
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="11sp"
+            android:text="@string/iSide_text"
+            android:textColor="@color/resDescription"
             />
     </LinearLayout>
     </ScrollView>

@@ -16,4 +16,10 @@
     <string name="register_state">State</string>
     <string name="register_tag">"To register to vote in %s, you must:"</string>
     <string name="register_button">Register to Vote</string>
+    <string name = "ID_text">This is example text. This is example text.This is example text. This is example text.</string>
+    <string name = "Reg_text">This is example text. This is example text.This is example text. This is example text.</string>
+    <string name = "Early_text">This is example text. This is example text.This is example text. This is example text.</string>
+    <string name = "Absentee_text">This is example text. This is example text.This is example text. This is example text.</string>
+    <string name = "Status_text">This is example text. This is example text.This is example text. This is example text.</string>
+    <string name = "iSide_text">This is example text. This is example text.This is example text. This is example text.</string>
 </resources>
