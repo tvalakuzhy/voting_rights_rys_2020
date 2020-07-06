@@ -11,4 +11,9 @@
     <string name="resource_iSideWith">iSideWith</string>
     <string name="resource_register_to_vote">How to Register to Vote</string>
     <string name="resource_absentee">Absentee Ballot</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register_state">State</string>
+    <string name="register_tag">"To register to vote in %s, you must:"</string>
+    <string name="register_button">Register to Vote</string>
 </resources>
