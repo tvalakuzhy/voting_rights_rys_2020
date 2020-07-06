@@ -27,7 +27,7 @@ import java.util.HashMap;
 public class Resources extends AppCompatActivity {
     private FrameLayout fragContainer;
     private HashMap <String, ArrayList<Object>> states = new HashMap<>();
-    private String userState = "california"; // should be all lower case, get this from settings page
+    private String userState = "new york"; // should be all lower case, get this from settings page
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,30 +99,26 @@ public class Resources extends AppCompatActivity {
     //Called when button clicked
     public void howToRegisterToVote(View view){
         //Pull information from other sites and display in app using fragment (give credit to sources)
-        openFragment("register");
+        openFragment();
     }
 
     // Opens Fragment
-    public void openFragment(String button) {
-        switch(button) {
-            case "register":
-                RegisterFragment frag = RegisterFragment.newInstance();
-                // get state info from map and pass it to fragment to display
-                ArrayList <Object> stateInfo = states.get(userState);
-                Bundle args = new Bundle();
-                args.putString("stateName", (String)stateInfo.get(0));
-                args.putString("abbv", (String)stateInfo.get(1));
-                args.putStringArray("info", (String[]) stateInfo.get(2));
-                args.putBoolean("regNeeded", (Boolean) stateInfo.get(3));
-                frag.setArguments(args);
+    public void openFragment() {
+      RegisterFragment frag = RegisterFragment.newInstance();
+      // get state info from map and pass it to fragment to display
+       ArrayList <Object> stateInfo = states.get(userState);
+       Bundle args = new Bundle();
+       args.putString("stateName", (String)stateInfo.get(0));
+       args.putString("abbv", (String)stateInfo.get(1));
+       args.putStringArray("info", (String[]) stateInfo.get(2));
+       args.putBoolean("regNeeded", (Boolean) stateInfo.get(3));
+       frag.setArguments(args);
 
-                FragmentManager fManager = getSupportFragmentManager();
-                FragmentTransaction transaction = fManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_right,R.anim.enter_from_right,R.anim.exit_to_right);
-                transaction.addToBackStack(null);
-                transaction.add(R.id.fragment_container, frag,"REGISTER_FRAGMENT").commit();
-                break;
-        }
+       FragmentManager fManager = getSupportFragmentManager();
+       FragmentTransaction transaction = fManager.beginTransaction();
+       transaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_right,R.anim.enter_from_right,R.anim.exit_to_right);
+       transaction.addToBackStack(null);
+       transaction.add(R.id.fragment_container, frag,"REGISTER_FRAGMENT").commit();
     }
 
     // loads JSON file and parses data for How to Register to vote page

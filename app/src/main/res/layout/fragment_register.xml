@@ -2,19 +2,21 @@
 
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:context=".RegisterFragment"
         android:background="#FFFFFF"
         android:clickable="true"
         android:focusable="true"
         android:orientation="vertical">
 
-        <TextView
+       <TextView
             android:id="@+id/state_name"
             android:layout_width="match_parent"
             android:layout_height="80dp"
@@ -23,6 +25,7 @@ android:layout_height="wrap_content">
             android:text="@string/register_state"
             android:textColor="#80909A"
             android:textSize="30sp"
+           android:layout_marginTop="10dp"
             />
 
         <TextView
@@ -37,10 +40,11 @@ android:layout_height="wrap_content">
             />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/register_list"
             android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
             />
 
         <Button
@@ -53,7 +57,7 @@ android:layout_height="wrap_content">
             android:textAllCaps="false"
             android:textColor="@color/buttonText"
             android:fontFamily="sans-serif-light"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="70dp"
             />
     </LinearLayout>
