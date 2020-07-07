@@ -1,4 +1,4 @@
-{
+{ // absentee, early
    "states":[
       {
          "name":"Alabama",
@@ -12,7 +12,7 @@
             "not currently be declared mentally incompetent through a competency hearing",
             "swear or affirm to \"support and defend the Constitution of the US and the State of Alabama and further disavow any belief or affiliation with any group which advocates the overthrow of the governments of the US or the State of Alabama by unlawful means and that the information contained herein is true, so help me God.\""
          ],
-         "links":["https://myinfo.alabamavotes.gov/VoterView/RegistrantSearch.do","https://sos.alabama.gov/alabama-votes/photo-voter-id"]
+         "links":["https://myinfo.alabamavotes.gov/VoterView/RegistrantSearch.do","https://sos.alabama.gov/alabama-votes/photo-voter-id","https://www.sos.alabama.gov/alabama-votes/voter/absentee-voting","https://www.sos.alabama.gov/alabama-votes"]
       },
       {
          "name":"Alaska",
@@ -25,7 +25,7 @@
             "not be a convicted felon (unless unconditionally discharged)",
             "not be registered to vote in another state"
          ],
-         "links":["https://myvoterinformation.alaska.gov/","http://www.elections.alaska.gov/Core/votingatthepollsonelectionday.php"]
+         "links":["https://myvoterinformation.alaska.gov/","http://www.elections.alaska.gov/Core/votingatthepollsonelectionday.php","http://www.elections.alaska.gov/Core/AKVoteEarly.php","http://www.elections.alaska.gov/Core/AKVoteEarly.php"]
       },
       {
          "name":"Arizona",
@@ -39,7 +39,7 @@
             "not have been convicted of treason or a felony (or have had your civil rights restored)",
             "not currently be declared an incapacitated person by a court of law"
          ],
-         "links":["https://my.arizona.vote/WhereToVote.aspx?s=individual","https://azsos.gov/elections/voting-election"]
+         "links":["https://my.arizona.vote/WhereToVote.aspx?s=individual","https://azsos.gov/elections/voting-election","https://azsos.gov/elections","https://azsos.gov/elections"]
       },
       {
          "name":"Arkansas",
@@ -53,7 +53,7 @@
             "not claim the right to vote in any other jurisdiction",
             "not previously be adjudged mentally incompetent by a court of competent jurisdiction"
          ],
-         "links":["https://www.voterview.ar-nova.org/voterview","https://www.sos.arkansas.gov/elections/voter-information/voter-registration-information"]
+         "links":["https://www.voterview.ar-nova.org/voterview","https://www.sos.arkansas.gov/elections/voter-information/voter-registration-information","https://www.sos.arkansas.gov/elections/voter-information/absentee-voting","https://www.sos.arkansas.gov/elections/voter-information"]
       },
       {
          "name":"California",
@@ -66,7 +66,7 @@
             "not be imprisoned or on parole for the conviction of a felony",
             "not currently be judged mentally incompetent by a court of law"
          ],
-         "links":["https://voterstatus.sos.ca.gov/","http://www.sos.ca.gov/elections/voting-resources/voting-california/what-bring/"]
+         "links":["https://voterstatus.sos.ca.gov/","http://www.sos.ca.gov/elections/voting-resources/voting-california/what-bring/","https://www.sos.ca.gov/elections/voting-info/ways-vote/","https://www.sos.ca.gov/elections/voting-info/ways-vote/"]
       },
       {
          "name":"Colorado",
@@ -78,7 +78,7 @@
             "be 18 years old on or before Election Day",
             "not be serving a sentence of detention, confinement, or parole for a felony conviction"
          ],
-         "links":["https://www.sos.state.co.us/voter/pages/pub/olvr/findVoterReg.xhtml","http://www.sos.state.co.us/pubs/elections/vote/acceptableFormsOfID.html"]
+         "links":["https://www.sos.state.co.us/voter/pages/pub/olvr/findVoterReg.xhtml","http://www.sos.state.co.us/pubs/elections/vote/acceptableFormsOfID.html","https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html","https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html"]
       },
       {
          "name":"Connecticut",
@@ -90,7 +90,7 @@
             "be at least 18 years old on the next election",
             "have completed confinement and parole if previously convicted of a felony"
          ],
-         "links":["https://portaldir.ct.gov/sots/LookUp.aspx","https://portal.ct.gov/SOTS/Election-Services/FAQ/FAQ---Voter-Identification"]
+         "links":["https://portaldir.ct.gov/sots/LookUp.aspx","https://portal.ct.gov/SOTS/Election-Services/FAQ/FAQ---Voter-Identification","https://portal.ct.gov/SOTS/Election-Services/Voter-Information/Absentee-Voting","https://portal.ct.gov/en/SOTS/Common-Elements/V5-Template---Redesign/Elections--Voting--Home-Page"]
       },
       {
          "name":"Delaware",
@@ -103,7 +103,7 @@
             "not be mentally incompetent",
             "if you are a felon, you are eligible to vote as long as you have served your sentence (including parole) and your convictions were not for disqualifying felonies: murder and manslaughter (except vehicular homicide), sexual offenses, or crimes against public administration involving bribery or improper influence or abuse of office"
          ],
-         "links":["https://ivote.de.gov/voterview","http://electionsncc.delaware.gov/faqs/voting.shtml#ques3b"]
+         "links":["https://ivote.de.gov/voterview","http://electionsncc.delaware.gov/faqs/voting.shtml#ques3b","https://elections.delaware.gov/services/voter/absentee/index.shtml","https://elections.delaware.gov/index.shtml"]
       },
       {
          "name":"District Of Columbia",
@@ -117,7 +117,7 @@
             "not have been judged legally incompetent by a court of law",
             "not claim the right to vote anywhere outside DC"
          ],
-         "links":["https://www.dcboe.org/Voters/Register-To-Vote/Check-Voter-Registration-Status","https://dcboe.org/FAQS/Election-Day/#FAQLink107"]
+         "links":["https://www.dcboe.org/Voters/Register-To-Vote/Check-Voter-Registration-Status","https://dcboe.org/FAQS/Election-Day/#FAQLink107","https://dcboe.org/AbsenteeBallotRequest","https://dcboe.org/"]
       },
       {
          "name":"Florida",
@@ -131,7 +131,7 @@
             "not be a convicted felon, or if you are, you must first have your civil rights restored if they were taken away",
             "swear or affirm the following \"I will protect and defend the Constitution of the United States and the Constitution of the State of Florida, that I am qualified to register as an elector under the Constitution and laws of the State of Florida, and that all information in this application is true.\""
          ],
-         "links":["https://registration.elections.myflorida.com/CheckVoterStatus","https://dos.myflorida.com/elections/for-voters/voting/election-day-voting/"]
+         "links":["https://registration.elections.myflorida.com/CheckVoterStatus","https://dos.myflorida.com/elections/for-voters/voting/election-day-voting/","https://www.dos.myflorida.com/elections/contacts/frequently-asked-questions/faq-voting/","https://www.dos.myflorida.com/elections/contacts/frequently-asked-questions/faq-voting/"]
       },
       {
          "name":"Georgia",
@@ -144,7 +144,7 @@
             "not be serving a sentence for having been convicted of a felony involving moral turpitude",
             "not have been judicially determined to be mentally incompetent, unless the disability has been removed"
          ],
-         "links":["https://www.mvp.sos.ga.gov/MVP/mvp.do","http://sos.ga.gov/index.php/elections/georgia_voter_identification_requirements2"]
+         "links":["https://www.mvp.sos.ga.gov/MVP/mvp.do","http://sos.ga.gov/index.php/elections/georgia_voter_identification_requirements2","https://sos.ga.gov/index.php/Elections/absentee_voting_in_georgia","https://sos.ga.gov/index.php/elections"]
       },
       {
          "name":"Hawaii",
@@ -157,7 +157,7 @@
             "not be incarcerated for a felony conviction",
             "not be adjudicated by a court as \"non compos mentis.\""
          ],
-         "links":["https://olvr.hawaii.gov/%28S%28vb2rcnebimyjdjcs5q22kazp%29%29/Default.aspx","https://elections.hawaii.gov/hawaii-votes-by-mail/"]
+         "links":["https://olvr.hawaii.gov/%28S%28vb2rcnebimyjdjcs5q22kazp%29%29/Default.aspx","https://elections.hawaii.gov/hawaii-votes-by-mail/","https://elections.hawaii.gov/hawaii-votes-by-mail/","https://elections.hawaii.gov/hawaii-votes-by-mail/"]
       },
       {
          "name":"Idaho",
@@ -169,7 +169,7 @@
             "have resided in Idaho and in the county for 30 days prior to the day of election",
             "not be serving a sentence of imprisonment for a felony. Your voting rights are restored once you have completed your sentence, probation, and parole"
          ],
-         "links":["https://elections.sos.idaho.gov/ElectionLink/ElectionLink/VoterSearch.aspx","https://idahovotes.gov/identification-requirements/"]
+         "links":["https://elections.sos.idaho.gov/ElectionLink/ElectionLink/VoterSearch.aspx","https://idahovotes.gov/identification-requirements/","https://elections.sos.idaho.gov/ElectionLink/ElectionLink/BeginAbsenteeRequest.aspx","https://idahovotes.gov/"]
       },
       {
          "name":"Illinois",
@@ -182,7 +182,7 @@
             "not be in jail for a felony conviction (but you can vote if you have completed your sentence)",
             "not claim the right to vote anywhere else"
          ],
-         "links":["https://ova.elections.il.gov/RegistrationLookup.aspx","https://www.elections.il.gov/Downloads/ElectionOperations/PDF/ILVoterInformation.pdf"]
+         "links":["https://ova.elections.il.gov/RegistrationLookup.aspx","https://www.elections.il.gov/Downloads/ElectionOperations/PDF/ILVoterInformation.pdf","https://www.elections.il.gov/","https://www.elections.il.gov/DocDisplay.aspx?Doc=/Downloads/ElectionOperations/PDF/EarlyVoting.pdf&MID=10"]
       },
       {
          "name":"Indiana",
@@ -194,7 +194,7 @@
             "be at least 18 years of age on the day of the next general election",
             "not currently be incarcerated for a criminal conviction"
          ],
-         "links":["https://indianavoters.in.gov/","http://www.in.gov/sos/elections/2401.htm"]
+         "links":["https://indianavoters.in.gov/","http://www.in.gov/sos/elections/2401.htm","https://www.in.gov/sos/elections/2402.htm","https://www.in.gov/sos/elections/2398.htm"]
       },
       {
          "name":"Iowa",
@@ -208,7 +208,7 @@
             "not currently be judged by a court to be \"incompetent to vote.\"",
             "not claim the right to vote in more than one place"
          ],
-         "links":["https://sos.iowa.gov/elections/voterreg/regtovote/search.aspx","https://sos.iowa.gov/elections/voterinformation/edfaq.html#3"]
+         "links":["https://sos.iowa.gov/elections/voterreg/regtovote/search.aspx","https://sos.iowa.gov/elections/voterinformation/edfaq.html#3","https://sos.iowa.gov/elections/electioninfo/absenteeinfo.html","https://sos.iowa.gov/elections/voterinformation/index.html"]
       },
       {
          "name":"Kansas",
@@ -221,7 +221,7 @@
             "have completed the terms of your sentence if convicted of a felony and recieved a certificate of discharge; a person serving a sentence for a felony conviction is ineligible to vote",
             "not claim the right to vote in any other location or under any other name"
          ],
-         "links":["https://myvoteinfo.voteks.org/VoterView/","https://sos.kansas.gov/elections/registration-voting/"]
+         "links":["https://myvoteinfo.voteks.org/VoterView/","https://sos.kansas.gov/elections/registration-voting/","https://sos.kansas.gov/elections/registration-voting/","https://sos.kansas.gov/elections/registration-voting/"]
       },
       {
          "name":"Kentucky",
@@ -235,7 +235,7 @@
             "not have been judged \"mentally incompetent\" in a court of law",
             "not claim the right to vote anywhere outside Kentucky"
          ],
-         "links": ["https://vrsws.sos.ky.gov/VIC/","https://elect.ky.gov/Frequently-Asked-Questions/Pages/Election-Day-Information.aspx"]
+         "links": ["https://vrsws.sos.ky.gov/VIC/","https://elect.ky.gov/Frequently-Asked-Questions/Pages/Election-Day-Information.aspx","https://elect.ky.gov/Voters/Pages/Absentee-Voting.aspx","https://elect.ky.gov/Voters/Pages/default.aspx"]
 
       },
       {
@@ -249,7 +249,7 @@
             "not currently be under an order of imprisonment for conviction of a felony. (If you are under an order but have not been incarcerated within the last five years, you ARE eligible to vote unless your conviction was for election fraud.)",
             "not currently be under a judgment of interdiction for mental incompetence"
          ],
-         "links":["https://voterportal.sos.la.gov/Home/VoterLogin","https://www.sos.la.gov/ElectionsAndVoting/Vote/VoteOnElectionDay/Pages/default.aspx"]
+         "links":["https://voterportal.sos.la.gov/Home/VoterLogin","https://www.sos.la.gov/ElectionsAndVoting/Vote/VoteOnElectionDay/Pages/default.aspx","https://www.sos.la.gov/ElectionsAndVoting/Vote/Pages/default.aspx","https://www.sos.la.gov/ElectionsAndVoting/Vote/VoteEarly/Pages/default.aspx"]
       },
       {
          "name":"Maine",
@@ -260,7 +260,7 @@
             "be a resident of Maine and the municipality in which you want to vote",
             "be 17 years old (you must be at least 18 years of age to vote, except that in primary elections you may vote if you are 17 but will be 18 by the general election)"
          ],
-         "links":["https://www1.maine.gov/portal/government/edemocracy/voter_lookup.php","https://www.maine.gov/sos/cec/elec/voter-info/right.html"]
+         "links":["https://www1.maine.gov/portal/government/edemocracy/voter_lookup.php","https://www.maine.gov/sos/cec/elec/voter-info/right.html","https://www.maine.gov/cgi-bin/online/AbsenteeBallot/index.pl","https://www.maine.gov/sos/cec/elec/index.html"]
       },
       {
          "name":"Maryland",
@@ -274,7 +274,7 @@
             "not have been convicted of buying or selling votes",
             "not have been convicted of a felony, or if you have, have completed serving a court ordered sentence of imprisonment"
          ],
-         "links":["https://voterservices.elections.maryland.gov/VoterSearch","https://elections.maryland.gov/voting/election_day_questions.html#_Toc190229207"]
+         "links":["https://voterservices.elections.maryland.gov/VoterSearch","https://elections.maryland.gov/voting/election_day_questions.html#_Toc190229207","https://elections.maryland.gov/voting/absentee.html","https://elections.maryland.gov/voting/early_voting.html"]
       },
       {
          "name":"Massachusetts",
@@ -288,7 +288,7 @@
             "not be under guardianship with respect to voting",
             "not be currently incarcerated for a felony conviction"
          ],
-         "links":["https://www.sec.state.ma.us/voterregistrationsearch/myvoterregstatus.aspx","http://www.sec.state.ma.us/ele/eleidreq/idrequirementsidx.htm"]
+         "links":["https://www.sec.state.ma.us/voterregistrationsearch/myvoterregstatus.aspx","http://www.sec.state.ma.us/ele/eleidreq/idrequirementsidx.htm","http://www.sec.state.ma.us/ele/eleabsentee/absidx.htm","http://www.sec.state.ma.us/ele/eleev/evidx.htm"]
       },
       {
          "name":"Michigan",
@@ -300,7 +300,7 @@
             "be a resident of Michigan and at least a 30 day resident of your city or township by Election Day",
             "not be confined in a jail after being convicted and sentenced"
          ],
-         "links":["https://mvic.sos.state.mi.us/","https://www.michigan.gov/sos/0,4670,7-127-5647_12539_29836-182649--,00.html"]
+         "links":["https://mvic.sos.state.mi.us/","https://www.michigan.gov/sos/0,4670,7-127-5647_12539_29836-182649--,00.html","https://www.michigan.gov/sos/0,4670,7-127-1633_8716_8728-21037--,00.html","https://www.michigan.gov/sos/0,4670,7-127-1633_8716---,00.html"]
       },
       {
          "name":"Minnesota",
@@ -315,7 +315,7 @@
             "not be under a court‑ordered guardianship in which the right to vote has been revoked",
             "not be found by a court to be legally incompetent to vote"
          ],
-         "links":["https://mnvotes.sos.state.mn.us/VoterStatus.aspx","http://www.sos.state.mn.us/elections-voting/election-day-voting/do-i-need-to-bring-id/"]
+         "links":["https://mnvotes.sos.state.mn.us/VoterStatus.aspx","http://www.sos.state.mn.us/elections-voting/election-day-voting/do-i-need-to-bring-id/","https://www.sos.state.mn.us/elections-voting/other-ways-to-vote/","https://www.sos.state.mn.us/elections-voting/other-ways-to-vote/"]
       },
       {
          "name":"Mississippi",
@@ -328,7 +328,7 @@
             "have not been convicted of voter fraud, murder, rape, bribery, theft, arson, obtaining money or goods under false pretense, perjury, forgery, embezzlement, bigamy, armed robbery, extortion, felony bad check, felony shoplifting, larceny, receiving stolen property, robbery, timber larceny, unlawful taking of a motor vehicle, statutory rape, carjacking, or larceny under lease or rental agreement, or have had your rights restored as required by law",
             "not have been declared mentally incompetent by a court"
          ],
-         "links":["https://www.msegov.com/sos/voter_registration/AmIRegistered","http://msvoterid.ms.gov/"]
+         "links":["https://www.msegov.com/sos/voter_registration/AmIRegistered","http://msvoterid.ms.gov/","https://www.sos.ms.gov/Elections-Voting/Pages/default.aspx","https://www.sos.ms.gov/Elections-Voting/Pages/default.aspx"]
       },
       {
          "name":"Missouri",
@@ -343,7 +343,7 @@
             "not be adjudged incapacitated by any court of law",
             "not be confined under a sentence of imprisonment"
          ],
-         "links":["https://s1.sos.mo.gov/elections/voterlookup/","http://s1.sos.mo.gov/elections/goVoteMissouri/howtovote#forms"]
+         "links":["https://s1.sos.mo.gov/elections/voterlookup/","http://s1.sos.mo.gov/elections/goVoteMissouri/howtovote#forms","https://www.sos.mo.gov/CMSImages/ElectionGoVoteMissouri/Absentee-MailinBallotSummaries.pdf","https://www.sos.mo.gov/elections/"]
       },
       {
          "name":"Montana",
@@ -357,7 +357,7 @@
             "not currently be determined by a court to be of unsound mind",
             "meet these qualifications by the next Election Day if you do not currently meet them"
          ],
-         "links":["https://app.mt.gov/voterinfo/","https://sosmt.gov/elections/faq/#identification"]
+         "links":["https://app.mt.gov/voterinfo/","https://sosmt.gov/elections/faq/#identification","https://sosmt.gov/elections/faq/","https://sosmt.gov/elections/faq/"]
       },
       {
          "name":"Nebraska",
@@ -371,7 +371,7 @@
             "not have been officially found to be mentally incompetent",
             "not have been convicted of treason, unless you have had your civil rights stored."
          ],
-         "links":["https://www.votercheck.necvr.ne.gov/VoterView/RegistrantSearch.do","https://sos.nebraska.gov/elections/election-day-faq"]
+         "links":["https://www.votercheck.necvr.ne.gov/VoterView/RegistrantSearch.do","https://sos.nebraska.gov/elections/election-day-faq","https://sos.nebraska.gov/elections/general-voter-information#early","https://sos.nebraska.gov/elections/early-voting-0"]
       },
       {
          "name":"Nevada",
@@ -385,7 +385,7 @@
             "not be determined by a court of law to be mentally incompetent",
             "claim no other place as your legal residence"
          ],
-         "links":["https://www.nvsos.gov/votersearch/","https://www.nvsos.gov/sos/sos-information/office-facts/faqs-all-division/elections#472"]
+         "links":["https://www.nvsos.gov/votersearch/","https://www.nvsos.gov/sos/sos-information/office-facts/faqs-all-division/elections#472","https://www.nvsos.gov/sos/elections/voters/absentee-voting","https://www.nvsos.gov/sos/elections/voters/early-voting-information"]
       },
       {
          "name":"New Hampshire",
@@ -398,7 +398,7 @@
             "Not have been convicted of a felony, unless you are past your final discharge",
             "Not have been ever convicted of bribery or intimidation relating to elections"
          ],
-         "links":["https://app.sos.nh.gov/Public/PartyInfo.aspx","http://sos.nh.gov/voterid.aspx"]
+         "links":["https://app.sos.nh.gov/Public/PartyInfo.aspx","http://sos.nh.gov/voterid.aspx","http://sos.nh.gov/WorkArea/DownloadAsset.aspx?id=8589993231","http://sos.nh.gov/Elections.aspx"]
       },
       {
          "name":"New Jersey",
@@ -411,7 +411,7 @@
             "not be serving a sentence or on parole or probation as the result of a conviction of any indictable offense under the laws of this or another state or of the United States",
             "not be declared mentally incompetent by a court"
          ],
-         "links":["https://voter.svrs.nj.gov/registration-check","https://www.state.nj.us/state/elections/vote-polling-location.shtml"]
+         "links":["https://voter.svrs.nj.gov/registration-check","https://www.state.nj.us/state/elections/vote-polling-location.shtml","https://www.state.nj.us/state/elections/vote-by-mail.shtml","https://nj.gov/state/elections/index.shtml"]
       },
       {
          "name":"New Mexico",
@@ -424,7 +424,7 @@
             "not have been denied the right to vote by a court of law by reason of mental incapacity",
             "not be currently incarcerated or serving parole or supervised probation for a felony conviction (or if you have been convicted of a felony, have completed all the terms and conditions of sentencing, have been granted a pardon by the Governor, or have had your conviction overturned on appeal)"
          ],
-         "links":["https://voterportal.servis.sos.state.nm.us/WhereToVote.aspx","https://www.sos.state.nm.us/voting-and-elections/voting-faqs/voting/"]
+         "links":["https://voterportal.servis.sos.state.nm.us/WhereToVote.aspx","https://www.sos.state.nm.us/voting-and-elections/voting-faqs/voting/","https://www.sos.state.nm.us/voting-and-elections/voter-information/absentee-and-early-voting/","https://www.sos.state.nm.us/voting-and-elections/voter-information/absentee-and-early-voting/"]
       },
       {
          "name":"New York",
@@ -438,7 +438,7 @@
             "not currently be judged incompetent by a court",
             "not claim the right to vote elsewhere"
          ],
-         "links":["https://voterlookup.elections.ny.gov","http://www.elections.ny.gov/VotingRegister.html"]
+         "links":["https://voterlookup.elections.ny.gov","http://www.elections.ny.gov/VotingRegister.html","https://www.elections.ny.gov/votingabsentee.html","https://www.elections.ny.gov/"]
       },
       {
          "name":"North Carolina",
@@ -450,7 +450,7 @@
             "16- and 17-year-olds may preregister to vote, but cannot vote until they are 18 (17-year-olds may vote in a primary election if they will be 18 at the time of the general election)",
             "not be currently serving a felony sentence, including probation, parole, or post-release supervision"
          ],
-         "links": ["https://vt.ncsbe.gov/RegLkup/","https://www.ncsbe.gov/Voters/Voter-ID"]
+         "links": ["https://vt.ncsbe.gov/RegLkup/","https://www.ncsbe.gov/Voters/Voter-ID","https://www.ncsbe.gov/Voting-Options/Absentee-Voting","https://www.ncsbe.gov/Voting-Options"]
       },
       {
          "name":"North Dakota",
@@ -463,7 +463,7 @@
             "reside in the precinct for 30 days preceding Election Day",
             "be able to provide a drivers license, non-driver identification card or other approved form of identification"
          ],
-         "links":["https://vip.sos.nd.gov/WhereToVoteID.aspx","https://vip.sos.nd.gov/IDRequirements.aspx"]
+         "links":["https://vip.sos.nd.gov/WhereToVoteID.aspx","https://vip.sos.nd.gov/IDRequirements.aspx","https://vip.sos.nd.gov/PortalListDetails.aspx?ptlhPKID=53&ptlPKID=7#content-start","https://vip.sos.nd.gov/civics101.aspx?ptlhPKID=126&ptlPKID=7"]
       },
       {
          "name":"Ohio",
@@ -477,7 +477,7 @@
             "not have been declared incompetent for voting purposes by a probate court",
             "not have been permanently denied the right to vote for violations of election laws."
          ],
-         "links":["https://voterlookup.ohiosos.gov/voterlookup.aspx","https://www.sos.state.oh.us/elections/voters/id-requirements/"]
+         "links":["https://voterlookup.ohiosos.gov/voterlookup.aspx","https://www.sos.state.oh.us/elections/voters/id-requirements/","https://www.sos.state.oh.us/elections/voters/absentee-voting/","https://www.sos.state.oh.us/elections/voters/absentee-voting/#inPerson"]
       },
       {
          "name":"Oklahoma",
@@ -490,7 +490,7 @@
             "have not been convicted of a felony and not completed the sentence including any term of incarceration, parole or supervision, or probation",
             "not now be under judgment as an incapacitated person, or a partially incapacitated person prohibited from voting"
          ],
-         "links":["https://services.okelections.us/voterSearch.aspx","http://www.ok.gov/elections/Voter_Info/Proof_of_Identity/index.html"]
+         "links":["https://services.okelections.us/voterSearch.aspx","http://www.ok.gov/elections/Voter_Info/Proof_of_Identity/index.html","https://www.ok.gov/elections/faqs.html#c101","https://www.ok.gov/elections/faqs.html#c97"]
       },
       {
          "name":"Oregon",
@@ -501,7 +501,7 @@
             "be a resident of Oregon",
             "at least 16 years old (to vote, you must be 18 by Election Day)"
          ],
-         "links":["https://secure.sos.state.or.us/orestar/vr/showVoterSearch.do","https://sos.oregon.gov/voting/Pages/myvote.aspx"]
+         "links":["https://secure.sos.state.or.us/orestar/vr/showVoterSearch.do","https://sos.oregon.gov/voting/Pages/myvote.aspx","https://sos.oregon.gov/voting/Pages/voteinor.aspx#absentee","https://sos.oregon.gov/voting/Pages/voteinor.aspx"]
       },
       {
          "name":"Pennsylvania",
@@ -514,7 +514,7 @@
             "not be incarcerated after conviction for a felony (your voting rights are restored immediately after incarceration)",
             "not have been convicted of violating any provision of the Pennsylvania Election Code within the last four years"
          ],
-         "links": ["https://www.pavoterservices.pa.gov/pages/voterregistrationstatus.aspx","https://www.votespa.com/Register-to-Vote/Pages/Voter-ID-for-First-Time-Voters.aspx"]
+         "links": ["https://www.pavoterservices.pa.gov/pages/voterregistrationstatus.aspx","https://www.votespa.com/Register-to-Vote/Pages/Voter-ID-for-First-Time-Voters.aspx","https://www.votespa.com/Voting-in-PA/Pages/Mail-and-Absentee-Ballot.aspx","https://www.votespa.com/Pages/default.aspx"]
       },
       {
          "name":"Rhode Island",
@@ -527,7 +527,7 @@
             "not be currently incarcerated in a correctional facility due to a felony conviction",
             "not have been lawfully judged to be mentally incompetent"
          ],
-         "links": ["https://vote.sos.ri.gov/Home/UpdateVoterRecord","https://vote.sos.ri.gov/Content/Pdfs/voter_id_information.pdf"]
+         "links": ["https://vote.sos.ri.gov/Home/UpdateVoterRecord","https://vote.sos.ri.gov/Content/Pdfs/voter_id_information.pdf","https://elections.ri.gov/voting/mailballot.php","https://elections.ri.gov/voting/"]
       },
       {
          "name":"South Carolina",
@@ -541,7 +541,7 @@
             "never have been convicted of a felony or offense against Election Day laws, or if previously convicted, have served your entire sentence, including probation or parole, or have received a pardon for the conviction",
             "not be under a court order declaring you mentally incompetent"
          ],
-         "links":["https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx","https://www.scvotes.org/node/235"]
+         "links":["https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx","https://www.scvotes.org/node/235","https://www.scvotes.gov/absentee-voting","https://www.scvotes.gov/"]
       },
       {
          "name":"South Dakota",
@@ -554,7 +554,7 @@
             "not be currently serving a sentence for a felony conviction which included imprisonment, served or suspended, in an adult penitentiary system",
             "not have been adjudged mentally incompetent by a court"
          ],
-         "links": ["https://vip.sdsos.gov/viplogin.aspx","https://sdsos.gov/elections-voting/voting/default.aspx"]
+         "links": ["https://vip.sdsos.gov/viplogin.aspx","https://sdsos.gov/elections-voting/voting/default.aspx","https://sdsos.gov/elections-voting/voting/absentee-voting.aspx","https://sdsos.gov/elections-voting/voting/default.aspx"]
       },
       {
          "name":"Tennessee",
@@ -567,7 +567,7 @@
             "not have been convicted of a felony, or if convicted, have had your full rights of citizenship restored (or have received a pardon)",
             "not be adjudicated incompetent by a court of competent jurisdiction (or have been restored to legal capacity"
          ],
-         "links": ["https://tnmap.tn.gov/voterlookup","https://sos.tn.gov/products/elections/what-id-required-when-voting"]
+         "links": ["https://tnmap.tn.gov/voterlookup","https://sos.tn.gov/products/elections/what-id-required-when-voting","https://sos.tn.gov/products/elections/absentee-voting","https://sos.tn.gov/products/elections/early-voting-person"]
       },
       {
          "name":"Texas",
@@ -581,7 +581,7 @@
             "if a convicted felon, you must have fully discharged your punishment, including any incarceration, parole, supervision, period of probation, or be pardoned",
             "have not been declared mentally incompetent by final judgment of a court of law"
          ],
-         "links":["https://teamrv-mvp.sos.texas.gov/MVP/mvp.do","https://www.votetexas.gov/faq/index.html"]
+         "links":["https://teamrv-mvp.sos.texas.gov/MVP/mvp.do","https://www.votetexas.gov/faq/index.html","https://www.sos.state.tx.us/elections/index.shtml","https://www.votetexas.gov/voting/when.html#early-voting"]
       },
       {
          "name":"Utah",
@@ -595,7 +595,7 @@
             "not be convicted of treason or crime against the elective franchise, unless restored to civil rights",
             "not be found to be mentally incompetent by a court of law"
          ],
-         "links":["https://votesearch.utah.gov/voter-search/search/search-by-voter/voter-info","https://voteinfo.utah.gov/voter-id-requirements/"]
+         "links":["https://votesearch.utah.gov/voter-search/search/search-by-voter/voter-info","https://voteinfo.utah.gov/voter-id-requirements/","https://voteinfo.utah.gov/learn-about-voting-by-mail-and-absentee-voting/","https://vote.utah.gov/"]
       },
       {
          "name":"Vermont",
@@ -607,7 +607,7 @@
             "be 18 years of age on or before Election Day",
             "have taken the following Oath: You solemnly swear (or affirm) that whenever you give your vote or suffrage, touching any matter that concerns the state of Vermont, you will do it so as in your conscience you shall judge will most conduce to the best good of the same, as established by the Constitution, without fear or favor of any person [Voter’s Oath, Vermont Constitution, Chapter II, Section 42]"
          ],
-         "links":["https://mvp.sec.state.vt.us","https://sos.vermont.gov/elections/voters/registration/#newvote"]
+         "links":["https://mvp.sec.state.vt.us","https://sos.vermont.gov/elections/voters/registration/#newvote","https://sos.vermont.gov/elections/voters/early-absentee-voting/","https://sos.vermont.gov/elections/voters/early-absentee-voting/"]
       },
       {
          "name":"Virginia",
@@ -620,7 +620,7 @@
             "not have been convicted of a felony, unless you have had your civil rights restored",
             "not currently be declared incapacitated by a court."
          ],
-         "links":["https://vote.elections.virginia.gov/VoterInformation","http://www.elections.virginia.gov/registration/photo-ids-required-to-vote/"]
+         "links":["https://vote.elections.virginia.gov/VoterInformation","http://www.elections.virginia.gov/registration/photo-ids-required-to-vote/","https://www.elections.virginia.gov/casting-a-ballot/absentee-voting/","https://www.elections.virginia.gov/casting-a-ballot/absentee-voting/"]
       },
       {
          "name":"Washington",
@@ -633,7 +633,7 @@
             "not be disqualified from voting due to a court order",
             "not be under Department of Corrections supervision for a Washington felony conviction."
          ],
-         "links":["https://voter.votewa.gov/WhereToVote.aspx","https://www.sos.wa.gov/elections/voters/"]
+         "links":["https://voter.votewa.gov/WhereToVote.aspx","https://www.sos.wa.gov/elections/voters/","https://www.sos.wa.gov/elections/faq_vote_by_mail.aspx","https://www.sos.wa.gov/elections/faq_vote_by_mail.aspx"]
       },
       {
          "name":"West Virginia",
@@ -646,7 +646,7 @@
             "not be under conviction, probation, or parole for a felony, treason, or election bribery",
             "not have been judged “mentally incompetent” in a court of competent jurisdiction"
          ],
-         "links":["https://services.sos.wv.gov/Elections/Voter/AmIRegisteredToVote","https://sos.wv.gov/elections/Pages/FAQs.aspx"]
+         "links":["https://services.sos.wv.gov/Elections/Voter/AmIRegisteredToVote","https://sos.wv.gov/elections/Pages/FAQs.aspx","https://sos.wv.gov/elections/Pages/AbsenteeVotingInformation.aspx","https://sos.wv.gov/elections/pages/default.aspx"]
       },
       {
          "name":"Wisconsin",
@@ -659,7 +659,7 @@
             "not have been convicted of treason, felony or bribery, or if you have, your civil rights have been restored",
             "not be incapable of understanding the objective of the elective process or under guardianship"
          ],
-         "links":["https://myvote.wi.gov/en-us/MyVoterInfo","https://myvote.wi.gov/en-us/PhotoIDRequired"]
+         "links":["https://myvote.wi.gov/en-us/MyVoterInfo","https://myvote.wi.gov/en-us/PhotoIDRequired","https://elections.wi.gov/voters/absentee","https://elections.wi.gov/"]
       },
       {
          "name":"Wyoming",
@@ -672,7 +672,7 @@
             "not be currently adjudicated mentally incompetent",
             "not have been convicted of a felony, or if convicted have had your voting rights restored"
          ],
-         "links":["https://sos.wyo.gov/Elections/State/RegisteringToVote.aspx","https://sos.wyo.gov/faqs.aspx?root=ELEC"]
+         "links":["https://sos.wyo.gov/Elections/State/RegisteringToVote.aspx","https://sos.wyo.gov/faqs.aspx?root=ELEC","https://sos.wyo.gov/Elections/State/AbsenteeVoting.aspx","https://sos.wyo.gov/elections/"]
       }
    ]
 }

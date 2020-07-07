@@ -90,10 +90,14 @@ public class Resources extends AppCompatActivity {
     //Called when button clicked
     public void absenteeBallot(View view){
         //Pull information from other sites and display in app using fragment (give credit to sources)
+        String url = ((String [])(states.get(userState).get(4)))[2];
+        customTabsIntent.launchUrl(this, Uri.parse(url));
     }
     //Called when button clicked
     public void earlyVoting(View view){
         //Pull information from other sites and display in app using fragment (give credit to sources)
+        String url = ((String [])(states.get(userState).get(4)))[3];
+        customTabsIntent.launchUrl(this, Uri.parse(url));
     }
     //Called when button clicked - Redirects to in app browser which displays website
     public void iSideWith(View view){
