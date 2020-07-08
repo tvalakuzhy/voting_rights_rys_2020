@@ -16,4 +16,10 @@
     <string name="register_state">State</string>
     <string name="register_tag">"To register to vote in %s, you must:"</string>
     <string name="register_button">Register to Vote</string>
+    <string name = "ID_text">Find out if you need to bring proper identification to vote </string>
+    <string name = "Reg_text">Want to vote? Check your state\'s requirements</string>
+    <string name = "Early_text">Check if your state allows you to vote prior to election day</string>
+    <string name = "Absentee_text">Not able to vote on election day? Find out how to request an absentee ballot and make your vote count.</string>
+    <string name = "Status_text">Confirm that you\'re registered to vote within your state</string>
+    <string name = "iSide_text">An Interactive site that matches voters to candidates that align with their political beliefs.</string>
 </resources>
