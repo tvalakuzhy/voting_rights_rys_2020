@@ -61,7 +61,8 @@ public class Settings extends AppCompatActivity {
         String sState = state.getText().toString();
         String sZip = zip.getText().toString();
         //Concatenate strings
-        String fullAddress = sAddress + " " + sCity + " " + sState + " " + sZip;
+
+        String fullAddress = sAddress + " " + sCity + "%2C" + " " + sState + " " + sZip;
         //Replace spaces with %20
         String fullAddress20 = fullAddress.replaceAll("\\s", "%20");
         //Add value of EditText to intent

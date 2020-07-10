@@ -22,4 +22,8 @@
     <string name = "Absentee_text">Not able to vote on election day? Find out how to request an absentee ballot and make your vote count.</string>
     <string name = "Status_text">Confirm that you\'re registered to vote within your state</string>
     <string name = "iSide_text">An Interactive site that matches voters to candidates that align with their political beliefs.</string>
+
+    <string name="allElec_button">All Elections</string>
+    <string name="myElec_button">My Elections</string>
+    <string name="YOUR_API_KEY">AIzaSyCdkZV6pD8BXJByaz5CCYdqURAZKAawvlY</string>
 </resources>
