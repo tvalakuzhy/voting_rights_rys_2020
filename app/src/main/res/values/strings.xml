@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">Voting Right!</string>
-    <string name="YOUR_API_KEY">AIzaSyDI5SLj_omQ32nEX5FfmNmkY-sTKQSmXbk</string>
+    <string name="address_hint">Address</string>
+    <string name="city_hint">City</string>
+    <string name="state_hint">State</string>
+    <string name="zip_hint">Zip</string>
+    <string name="save_button">Save</string>
+    <string name="resource_ID">Valid Forms of ID</string>
+    <string name="resource_voter_status">Registration Status</string>
+    <string name="resource_early_voting">Early Voting</string>
+    <string name="resource_iSideWith">iSideWith</string>
+    <string name="resource_register_to_vote">How to Register to Vote</string>
+    <string name="resource_absentee">Absentee Ballot</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register_state">State</string>
+    <string name="register_tag">"To register to vote in %s, you must:"</string>
+    <string name="register_button">Register to Vote</string>
+    <string name = "ID_text">Find out if you need to bring proper identification to vote </string>
+    <string name = "Reg_text">Want to vote? Check your state\'s requirements</string>
+    <string name = "Early_text">Check if your state allows you to vote prior to election day</string>
+    <string name = "Absentee_text">Not able to vote on election day? Find out how to request an absentee ballot and make your vote count.</string>
+    <string name = "Status_text">Confirm that you\'re registered to vote within your state</string>
+    <string name = "iSide_text">An Interactive site that matches voters to candidates that align with their political beliefs.</string>
 </resources>
