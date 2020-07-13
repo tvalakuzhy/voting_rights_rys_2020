@@ -298,13 +298,13 @@ public class Elections extends AppCompatActivity {
 
             // save a reference to the textview for later
             allTextViews[i] = rowTextView;
-            rowTextView.setVisibility(view.INVISIBLE);
+            //rowTextView.setVisibility(view.INVISIBLE);
 
             if (node.isMyElection()) {
                 //myElectionsLayout.addView(rowTextView);
                 myTextViews[my_elec_index] = rowTextView;
                 my_elec_index += 1;
-                rowTextView.setVisibility(view.VISIBLE);
+                //rowTextView.setVisibility(view.VISIBLE);
 
             }
         }
