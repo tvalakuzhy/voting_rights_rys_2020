@@ -39,7 +39,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     //Custom tabs support
     implementation 'com.android.support:customtabs:23.3.0'
-
-    //Fix Dex error given
+    
     implementation 'com.android.support:multidex:1.0.3'
 }
