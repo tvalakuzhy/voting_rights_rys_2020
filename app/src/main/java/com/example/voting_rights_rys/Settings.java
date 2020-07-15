@@ -46,28 +46,55 @@ public class Settings extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Uses an address verification API to check address
+     * Using Unirest client
+     */
+    /*public boolean verifyAddress(String url){
+        HttpResponse<String> response = Unirest.get("https://snapcx-avs-v1.p.rapidapi.com/validateAddress?request_id=unique_string_request_id&street=118%2520Birch%2520Drive&state=%7BPA%7D&zipcode=%7B19335%7D&city=%7BDowningtown%7D")
+                .header("x-rapidapi-host", "snapcx-avs-v1.p.rapidapi.com")
+                .header("x-rapidapi-key", "506d9d5d0dmsh298094af98acb14p12ee0djsn56c594734c66")
+                .asString();
+        if(response.getStatus()==200){
+            //Check for good response
+            System.out.println("Response status is 200");
+
+
+            //Condition when response returns AVS01 - perfect match
+            //Condition when response returns AVS02 - partial match
+            //Condition when response returns AVS03 - no matching address found
+        }
+        return true;
+    }*/
     //Called when submit button is clicked
     public void sendAddress(View view){
         //Create bind between Settings and Elections activities
         Intent intent = new Intent(this, Elections.class);
+
         //Extract address from EditText object
         EditText address = (EditText) findViewById(R.id.editTextTextAddress);
         EditText city = (EditText) findViewById(R.id.editTextTextCity);
         EditText state = (EditText) findViewById(R.id.editTextTextState);
         EditText zip = (EditText) findViewById(R.id.editTextTextZip);
+
         //Convert EditText objects to String objects
         String sAddress = address.getText().toString();
         String sCity = city.getText().toString();
         String sState = state.getText().toString();
         String sZip = zip.getText().toString();
-        //Concatenate strings
 
-        String fullAddress = sAddress + " " + sCity + "%2C" + " " + sState + " " + sZip;
-        //Replace spaces with %20
+
+        //Validate address using address verification API
+        //boolean validAddress = verifyAddress(url);
+
+        //Format address
+        String fullAddress = sAddress + " " + sCity + "%20" + " " + sState + " " + sZip;
         String fullAddress20 = fullAddress.replaceAll("\\s", "%20");
-        //Add value of EditText to intent
+
+        //Put the value of EditText into the Intent
         intent.putExtra(EXTRA_ADDRESS, fullAddress20);
-        //Starts the Elections activity and sends intent
+        //Send Intent to the Elections Activity and start the Elections Activity
         startActivity(intent);
     }
 }
