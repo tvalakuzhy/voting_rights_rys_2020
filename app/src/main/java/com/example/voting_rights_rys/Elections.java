@@ -31,63 +31,78 @@ import static java.lang.String.join;
 and then parses it. **/
 class GetFromAPI{
     static String address;
-    static String API_KEY = "AIzaSyCdkZV6pD8BXJByaz5CCYdqURAZKAawvlY";
+    static String API_KEY = "";
     public GetFromAPI(String address){
         this.address = address;
     }
     /** Gets the JSON of elections **/
-    String getElectionJSON(){
-        String API_URL =  "https://www.googleapis.com/civicinfo/v2/elections?key=";
-        try {
-            URL url = new URL(API_URL + API_KEY);
-            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-            try {
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
-                StringBuilder stringBuilder = new StringBuilder();
-                String line;
-                while ((line = bufferedReader.readLine()) != null) {
-                    stringBuilder.append(line).append("\n");
+    String getElectionJSON() throws InterruptedException {
+        final String[] result = new String[1];
+        final String API_URL = "https://www.googleapis.com/civicinfo/v2/elections?key=";
+
+        Thread electionThread = new Thread(new Runnable() {
+            public void run() {
+                try {
+                    URL url = new URL(API_URL + API_KEY);
+                    HttpURLConnection urlConnection = (HttpURLConnection)url.openConnection();
+                    try {
+                        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+                        StringBuilder stringBuilder = new StringBuilder();
+                        String line;
+                        while ((line = bufferedReader.readLine()) != null) {
+                            stringBuilder.append(line).append("\n");
+                        }
+                        bufferedReader.close();
+                        result[0] = stringBuilder.toString();
+                    }
+                    finally{
+                        urlConnection.disconnect();
+                    }
                 }
-                bufferedReader.close();
-                //System.out.println(stringBuilder.toString());
-                return stringBuilder.toString();
+                catch(Exception e) {
+                    Log.e("ERROR", e.getMessage(), e);
+                    result[0] = null;
+                }
             }
-            finally{
-                urlConnection.disconnect();
-            }
-        }
-        catch(Exception e) {
-            Log.e("ERROR", e.getMessage(), e);
-            return null;
-        }
+        });
+        electionThread.start();
+        electionThread.join();
+        return result[0];
     }
     /** Gets the JSON from VoterInfoQuery for a particular election. **/
-    String getVoterInfoJSON(Election election){
+    String getVoterInfoJSON(Election election) throws InterruptedException{
+        final String[] result = new String[1];
+        final String API_URL =  "https://civicinfo.googleapis.com/civicinfo/v2/voterinfo?address=";
+        final String electionID = election.getID();
 
-        String API_URL =  "https://civicinfo.googleapis.com/civicinfo/v2/voterinfo?address=";
-        String electionID = election.getID();
-
-        try {
-            URL url = new URL(API_URL + address + "&electionID=" + electionID + "&key=" + API_KEY);
-            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-            try {
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
-                StringBuilder stringBuilder = new StringBuilder();
-                String line;
-                while ((line = bufferedReader.readLine()) != null) {
-                    stringBuilder.append(line).append("\n");
+        Thread voterThread = new Thread(new Runnable() {
+            public void run() {
+                try {
+                    URL url = new URL(API_URL + address + "&electionID=" + electionID  + "&returnAllAvailableData=true" + "&key=" + API_KEY);
+                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                    try {
+                        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+                        StringBuilder stringBuilder = new StringBuilder();
+                        String line;
+                        while ((line = bufferedReader.readLine()) != null) {
+                            stringBuilder.append(line).append("\n");
+                        }
+                        bufferedReader.close();
+                        result[0] = stringBuilder.toString();
+                    }
+                    finally{
+                        urlConnection.disconnect();
+                    }
                 }
-                bufferedReader.close();
-                return stringBuilder.toString();
+                catch(Exception e) {
+                    Log.e("ERROR", e.getMessage(), e);
+                    result[0] = null;
+                }
             }
-            finally{
-                urlConnection.disconnect();
-            }
-        }
-        catch(Exception e) {
-            Log.e("ERROR", e.getMessage(), e);
-            return null;
-        }
+        });
+        voterThread.start();
+        voterThread.join();
+        return result[0];
     }
 
     /** Parses the elction JSON, creates Election objects for each election and <br>
@@ -103,7 +118,7 @@ class GetFromAPI{
         String date;
         String division;
         try {
-            JSONObject resp = new JSONObject(join(response, ""));
+            JSONObject resp = new JSONObject(response);
             JSONArray elections = resp.getJSONArray("elections");
             Election x = null;
             for (int i = 0; i < elections.length(); ++i) {
@@ -126,7 +141,6 @@ class GetFromAPI{
         if(response.contains("earlyVotingSites")){
             election.isEarlyVotingAllowed = true;
         }
-
     }
 }
 /** Elections class -- an election object has fields name, date, id, level <br>
@@ -233,9 +247,12 @@ public class Elections extends AppCompatActivity {
         /**TEST THAT ADDRESS IS RECEIVED FROM SETTINGS*/
         TextView textView = findViewById(R.id.addressTest);
         textView.setText(userAddress);
-        int comma_index = userAddress.indexOf("%2C");
-        userState = userAddress.substring(comma_index +6, comma_index + 8).toLowerCase();
+        int comma_index = 0;
 
+        if (userAddress != null) {
+            comma_index = userAddress.indexOf("%2C");
+            userState = userAddress.substring(comma_index +6, comma_index + 8).toLowerCase();
+        }
 
         //Initialize bottom nav bar and select "Elections"
         BottomNavigationView bottomNavView = findViewById(R.id.bot_nav);
@@ -265,50 +282,58 @@ public class Elections extends AppCompatActivity {
             }
         });
 
-        GetFromAPI get = new GetFromAPI(userAddress);
-        String electionJSON = get.getElectionJSON();
-        Election e = get.parseElectionJSON(electionJSON, userState);
+        try {
+            getData();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
-        LinkedList<TextView> all_election_views = new LinkedList<>();
-        allElections = e.getAllElections();
-        myElections = e.getMyElections();
-        int ae_size = allElections.size();
-        int mye_size = myElections.size();
-        allTextViews = new TextView[ae_size];
-        myTextViews = new TextView[mye_size];
+    public void getData () throws InterruptedException {
 
+        if (userAddress != null) {
+            GetFromAPI get = new GetFromAPI(userAddress);
+            String electionJSON = get.getElectionJSON();
+            System.out.println(electionJSON);
+            Election e = get.parseElectionJSON(electionJSON, userState);
+            LinkedList<TextView> all_election_views = new LinkedList<>();
+            allElections = e.getAllElections();
+            myElections = e.getMyElections();
+            int ae_size = allElections.size();
+            int mye_size = myElections.size();
+            allTextViews = new TextView[ae_size];
+            myTextViews = new TextView[mye_size];
 
-        Election node; /// = e.getAllElections().head();
-        String viewText;
-        int my_elec_index = 0;
-        for (int i = 0; i < ae_size; i++) {
-            node = e.getAllElections().get(i);
-            String voterJSON = get.getVoterInfoJSON(node);
-            get.parseVoterJSON(voterJSON, node);
-            viewText = "Name: " + node.getName() + "\n" + "Date: " + node.getDate() + "\n";
+            Election node; /// = e.getAllElections().head();
+            String viewText;
+            int my_elec_index = 0;
+            for (int i = 0; i < ae_size; i++) {
+                node = e.getAllElections().get(i);
+                String voterJSON = get.getVoterInfoJSON(node);
+                get.parseVoterJSON(voterJSON, node);
+                viewText = "Name: " + node.getName() + "\n" + "Date: " + node.getDate() + "\n";
 
-            // create a new textview
-            final TextView rowTextView = new TextView(this);
+                // create a new textview
+                final TextView rowTextView = new TextView(this);
 
-            // set text for the textview -- Election Name and Date
-            rowTextView.setText("Election name: " + node.getName() + "\n" + "Election date: " + node.getDate());
+                // set text for the textview -- Election Name and Date
+                rowTextView.setText("Election name: " + node.getName() + "\n" + "Election date: " + node.getDate());
 
-            // add the textview to the linearlayout
-            //allElectionsLayout.addView(rowTextView);
+                // add the textview to the linearlayout
+                //allElectionsLayout.addView(rowTextView);
 
-            // save a reference to the textview for later
-            allTextViews[i] = rowTextView;
-            //rowTextView.setVisibility(view.INVISIBLE);
+                // save a reference to the textview for later
+                allTextViews[i] = rowTextView;
+                //rowTextView.setVisibility(view.INVISIBLE);
 
-            if (node.isMyElection()) {
-                //myElectionsLayout.addView(rowTextView);
-                myTextViews[my_elec_index] = rowTextView;
-                my_elec_index += 1;
-                //rowTextView.setVisibility(view.VISIBLE);
-
+                if (node.isMyElection()) {
+                    //myElectionsLayout.addView(rowTextView);
+                    myTextViews[my_elec_index] = rowTextView;
+                    my_elec_index += 1;
+                    //rowTextView.setVisibility(view.VISIBLE);
+                }
             }
         }
-
     }
 
     /**
