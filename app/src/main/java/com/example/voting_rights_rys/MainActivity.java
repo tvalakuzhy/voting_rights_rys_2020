@@ -1,20 +1,36 @@
 package com.example.voting_rights_rys;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+
 public class MainActivity extends AppCompatActivity {
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Get the Intent which started this activity (address string from Settings)
+        Intent intent = getIntent();
+        //Using the key to get the bundle (address)
+        String pollplace = intent.getStringExtra(Elections.pollingLocation);
+        System.out.println("pollplace: "+ pollplace);
+        if (pollplace != null) {
+            //TEST THAT ADDRESS IS RECEIVED FROM SETTINGS
+            TextView polltext = findViewById(R.id.pollingplace);
+            polltext.setText(pollplace);
+        }
 
         //Initialize bottom nav bar and select "Home"
         BottomNavigationView bottomNavView = findViewById(R.id.bot_nav);
@@ -42,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 return false;
             }
+
         });
+
     }
+
 }

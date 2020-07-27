@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -128,7 +130,7 @@ class GetFromAPI {
                         JSONObject resp = new JSONObject(response);
                         JSONArray elections = resp.getJSONArray("elections");
                         Election x = null;
-                        for (int i = 0; i < elections.length(); ++i) {
+                        for (int i = 0; i < elections.length(); i++) {
                                 JSONObject elec = elections.getJSONObject(i);
                                 id = elec.getString("id");
                                 if (!id.equals("2000")) {
@@ -146,11 +148,42 @@ class GetFromAPI {
                 }
         }
 
-        void parseVoterJSON(String response, Election election){
+        String parseVoterJSON(String response, Election election){
                 if (response.contains("earlyVotingSites")){
                         election.isEarlyVotingAllowed = true;
                 }
-        }
+                if (response.contains("pollingLocations")) {
+                        System.out.println("inside polling if");
+                        JSONObject resp;
+                        try {
+                                resp = new JSONObject(response);
+
+                                JSONArray locations = resp.getJSONArray("pollingLocations");
+                                JSONObject loc = (JSONObject) locations.get(0);
+                                String address = "";
+                                if (response.contains("locationName")){
+                                        address += loc.getString("locationName") + "\n";
+                                }
+                                address += loc.getString("line1");
+                                if (response.contains("line2")) {
+                                        address += loc.getString("line2")+ "\n";
+                                        if (response.contains("line3")){
+                                                address += loc.getString("line3")+ "\n";
+                                        }
+                                }
+                                address += loc.getString("city") + ",";
+                                address += loc.getString("state");
+                                address += loc.getString("zip");
+                                //System.out.println(address);
+                                return address;
+                        }
+                        catch (JSONException e) {
+                                e.printStackTrace();
+
+                        }
+                }
+
+                return "Your polling place is unavailable, check back later.";}
 }
 
 /** Elections class -- an election object has fields name, date, id, level <br>
@@ -236,6 +269,7 @@ class Election {
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class Elections extends AppCompatActivity {
+        public static final String pollingLocation = "com.example.voting_rights_rys.POLLINGPLACE";
         static String userState;
         static String userAddress;
         static LinkedList allElections;
@@ -244,6 +278,7 @@ public class Elections extends AppCompatActivity {
         //static LinearLayout myElectionsLayout = new LinearLayout();
         static ArrayList<String> allElectionDisplay;
         static ArrayList<String> myElectionDisplay;
+        public static String pollingPlace ="";
 
 
         @Override
@@ -256,8 +291,8 @@ public class Elections extends AppCompatActivity {
                 //Using the key to get the bundle (address)
                 userAddress = intent.getStringExtra(Settings.EXTRA_ADDRESS);
                 /**TEST THAT ADDRESS IS RECEIVED FROM SETTINGS*/
-        /*TextView textView = findViewById(R.id.addressTest);
-        textView.setText(userAddress); */
+                /*TextView textView = findViewById(R.id.addressTest);
+                textView.setText(userAddress); */
 
                 int comma_index = 0;
 
@@ -296,6 +331,8 @@ public class Elections extends AppCompatActivity {
 
                 try {
                         getData();
+                        //sendpollingplace();
+
                 } catch (InterruptedException e) {
                         e.printStackTrace();
                 }
@@ -320,8 +357,9 @@ public class Elections extends AppCompatActivity {
                         for (int i = 0; i < ae_size; i++) {
                                 node = e.getAllElections().get(i);
                                 String voterJSON = get.getVoterInfoJSON(node);
-                                get.parseVoterJSON(voterJSON, node);
-                                System.out.println(node.getID());
+                                pollingPlace = get.parseVoterJSON(voterJSON, node);
+                                //System.out.println("This is the polling place  " + pollingPlace);
+                                //System.out.println(node.getID());
                                 String this_election = "Name: " + node.getName() + "\n" + "Date: " + node.getDate() + "\n";
                                 viewText += this_election;
                                 //System.out.println(viewText);
@@ -351,23 +389,25 @@ public class Elections extends AppCompatActivity {
 
 
 
+
+
         /**
          * Called when the user taps the "all elections" button
          **/
         public void displayAllElections(View view) {
                 //System.out.println("all elections was clicked");
                 //System.out.println(allElections.size());
-                TextView error =(TextView) findViewById(R.id.errormsg);
+                TextView error = (TextView) findViewById(R.id.errormsg);
                 findViewById(R.id.errormsg).setVisibility(view.INVISIBLE);
                 findViewById(R.id.myElectionsTV).setVisibility(view.INVISIBLE);
-                if (allElections.size() == 0) {
-
-                        error.setText("There are no elections." + "\n" +  "Check your address or try again later.");
+                try {
+                        if (allElections.size() != 0) {
+                                findViewById(R.id.allElectionsTV).setVisibility(view.VISIBLE);
+                        }
+                } catch (NullPointerException e) {
+                        error.setText("There are no elections." + "\n" + "Check your address or try again later.");
                         findViewById(R.id.errormsg).setVisibility(view.VISIBLE);
-
-                        return;
                 }
-                findViewById(R.id.allElectionsTV).setVisibility(view.VISIBLE);
 
 
                 /**for (int i = 0; i < myElections.size(); i++){
@@ -384,12 +424,16 @@ public class Elections extends AppCompatActivity {
                 findViewById(R.id.allElectionsTV).setVisibility(view.INVISIBLE);
                 TextView error =(TextView) findViewById(R.id.errormsg);
                 findViewById(R.id.errormsg).setVisibility(view.INVISIBLE);
-                if (myElections.size() == 0) {
+                try {
+                        if(myElections.size() != 0) {
+                                findViewById(R.id.myElectionsTV).setVisibility(view.VISIBLE);
+                        }
+                }
+                catch (NullPointerException e) {
                         error.setText("There are no elections." + "\n" +  "Check your address or try again later.");
                         findViewById(R.id.errormsg).setVisibility(view.VISIBLE);
-                        return;
                 }
-                findViewById(R.id.myElectionsTV).setVisibility(view.VISIBLE);
+
 
                 /**for (int i = 0; i < allElections.size(); i++){
                  allTextViews[i].setVisibility(view.INVISIBLE);
@@ -397,5 +441,17 @@ public class Elections extends AppCompatActivity {
                  for (int j = 0; j < myElections.size(); j ++){
                  myTextViews[j].setVisibility(view.VISIBLE);
                  }**/
+        }
+        public void sendpollingplace(View view){
+                System.out.println("inside send polling place function");
+                if (pollingPlace != null) {
+                        System.out.println(pollingPlace);
+                        //Create bind between Settings and Elections activities
+                        Intent intent = new Intent(this, MainActivity.class);
+                        //Add value of EditText to intent
+                        intent.putExtra(pollingLocation, pollingPlace);
+                        //Starts the Elections activity and sends intent
+                        startActivity(intent);
+                }
         }
 }
