@@ -209,6 +209,7 @@ class Election {
                 String day = date.substring(8,10);
                 return month + " " + day + ", " + year;
         }
+  
         /** Finds the level of the election. If the election is federal or in the same state as <br>
          userState, then myElection is set to true.
          Precondition: userState is the lowercase abbreviation of the state name <br>
@@ -248,7 +249,6 @@ class Election {
                         if (this.myElection){
                                 my_elections.add(this);
                         }
-
                 }
         }
 
