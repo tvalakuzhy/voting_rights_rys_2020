@@ -31,7 +31,7 @@ import static java.lang.String.join;
 and then parses it. **/
 class GetFromAPI{
     static String address;
-    static String API_KEY = "";
+    static String API_KEY = "AIzaSyCWU07pSAk1CfApBN5K0T2Axzb0R5Kok-E";
     public GetFromAPI(String address){
         this.address = address;
     }
