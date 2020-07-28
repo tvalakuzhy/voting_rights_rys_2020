@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Switch;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -45,6 +46,26 @@ public class Settings extends AppCompatActivity {
                 return false;
             }
         });
+        //Initiate the Calendar switch button
+        final Switch UpcomingElectionsSwitch = (Switch) findViewById(R.id.UpcomingElectionsSwitch);
+        //Set listener for Calender switch button
+        UpcomingElectionsSwitch.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if(UpcomingElectionsSwitch.isChecked()){ //Add Elections to Google calendar
+                    System.out.println("Upcoming Elections switch is on");
+                    /**
+                     * 1. Get AllElections linked list from Elections? / Send notifications logic in Elections page?
+                     * 2. Send user notifications for upcoming elections in AllElections linked list
+                     */
+
+                }else{
+                    System.out.println("Upcoming Elections switch is off");
+                }
+            }
+        });
+
+
     }
 
     /**
