@@ -7,13 +7,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Settings extends AppCompatActivity {
     public static final String EXTRA_ADDRESS = "com.example.voting_rights_rys.ADDRESS";
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +28,9 @@ public class Settings extends AppCompatActivity {
         //Initialize bottom nav bar and select "Settings"
         BottomNavigationView bottomNavView = findViewById(R.id.bot_nav);
         bottomNavView.setSelectedItemId(R.id.settings);
+
+        //Initialize the Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
 
         //Start a new activity when a nav bar item is selected
         bottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -64,7 +73,16 @@ public class Settings extends AppCompatActivity {
                 }
             }
         });
-
+        //Initialize and set click listener for signout button
+        final Button SignOutButton = (Button) findViewById(R.id.signOutBtn);
+        SignOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                Intent intent = new Intent(Settings.this, Login.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

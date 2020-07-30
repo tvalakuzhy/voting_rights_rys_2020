@@ -57,7 +57,8 @@ public class Login extends AppCompatActivity {
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                     toastMessage("Successfully signed in with: " + user.getEmail());
-                    
+                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    startActivity(intent);
                 }
             }
         };
@@ -127,15 +128,15 @@ public class Login extends AppCompatActivity {
                                     @NonNull Task<AuthResult> task)
                             {
                                 if (task.isSuccessful()) {
+                                    Log.d(TAG, "Login is successful");
                                     toastMessage("Successful Login");
                                     // If login was successful, reroute to the main activity
-                                    Intent intent
-                                            = new Intent(Login.this,
-                                            MainActivity.class);
+                                    Intent intent = new Intent(Login.this, MainActivity.class);
                                     startActivity(intent);
                                 }
                                 else {
                                     // Signal that sign in has failed
+                                    Log.d(TAG, "Login has failed");
                                     toastMessage("Failed Login");
                                     String errorCode = ((FirebaseException) task.getException()).getLocalizedMessage();
                                     String errorCode1 = ((FirebaseException) task.getException()).getMessage();
