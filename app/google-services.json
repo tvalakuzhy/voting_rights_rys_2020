@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1023131562368",
+    "firebase_url": "https://voting-rights.firebaseio.com",
+    "project_id": "voting-rights",
+    "storage_bucket": "voting-rights.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023131562368:android:1406b5ac231a6a4f0c9165",
+        "android_client_info": {
+          "package_name": "com.example.voting_rights_rys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023131562368-m1oe48ojm8ip7nd16uaaeag9aeub5op7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdkZV6pD8BXJByaz5CCYdqURAZKAawvlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023131562368-m1oe48ojm8ip7nd16uaaeag9aeub5op7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
