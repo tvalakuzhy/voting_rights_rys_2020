@@ -24,6 +24,8 @@
     <string name = "iSide_text">An Interactive site that matches voters to candidates</string>
 
     <string name="allElec_button">All Elections</string>
-    <string name="myElec_button">My Elections</string>
+    <string name="myElec_button" translatable="false">My Elections</string>
     <string name="YOUR_API_KEY">AIzaSyCdkZV6pD8BXJByaz5CCYdqURAZKAawvlY</string>
+    <string name="channel_name">electionNotification</string>
+    <string name="channel_description">Allow for election notifications</string>
 </resources>
