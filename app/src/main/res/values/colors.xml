@@ -5,7 +5,8 @@
     <color name="colorPrimaryDark">#293D5D</color>
     <color name="colorPrimaryLight">#F1FAEE</color>
     <color name="colorAccent">#D71A00</color>
-    <color name="buttonText">#727D8F</color>
+    <color name="buttonText">#818998</color>
     <color name="buttonBackColor">#F5F6F8</color>
     <color name="resDescription">#9EA4AE</color>
+    <color name="lightGreyLine">#ededed</color>
 </resources>
