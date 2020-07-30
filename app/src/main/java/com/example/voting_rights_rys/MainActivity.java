@@ -3,22 +3,37 @@ package com.example.voting_rights_rys;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
+import com.google.android.gms.gcm.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class MainActivity extends AppCompatActivity {
+    public static final String CHANNEL_ID = "homeChannelID";
+    public static final int NOTIFICATION_ID1 = 12345678;
+    private NotificationManagerCompat notificationManager;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main);
 
         //Get the Intent which started this activity (address string from Settings)
@@ -60,7 +75,34 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
     }
 
+    //create and send notification
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public void sendNotification (View v){
+        System.out.println("Inside sendNotification button");
+
+        //When notification is pressed, direct to Elections class
+        Intent intent = new Intent(this, Elections.class);
+
+        //Create a back stack to preserve user navigation experience
+        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+        stackBuilder.addNextIntentWithParentStack(intent);
+        PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        //Create the notification
+        Notification.Builder notificationTest = new Notification.Builder(this, CHANNEL_ID)
+                .setSmallIcon(R.drawable.ic_notification_small_icon)
+                .setContentTitle("Test notification")
+                .setContentText("test test test")
+                .setPriority(Notification.PRIORITY_DEFAULT)
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                //Pass pendingIntent to the app
+                .setContentIntent(pendingIntent) //set up the intent to launch when user taps app
+                .setAutoCancel(true); //automatically removes app when user taps it
+
+        //Build notification and display notification
+        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.notify(NOTIFICATION_ID1, notificationTest.build());
+    }
 }
