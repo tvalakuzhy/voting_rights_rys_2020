@@ -57,7 +57,7 @@ public class Login extends AppCompatActivity {
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                     toastMessage("Successfully signed in with: " + user.getEmail());
-                    // see if this means you can login to the mainactivity
+                    
                 }
             }
         };
