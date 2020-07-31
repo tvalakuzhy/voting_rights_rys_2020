@@ -16,9 +16,11 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class SignUp extends AppCompatActivity {
     private static final String TAG = "SignUp";
@@ -72,13 +74,14 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View view) {
                 String email = mEmail.getText().toString();
                 String pass = mPassword.getText().toString();
-                createAccount(email, pass);
+                String name = mName.getText().toString();
+                createAccount(email, pass, name);
             }
         });
 
     }
 
-    private void createAccount(String email, String password) {
+    private void createAccount(String email, String password, final String name) {
         if (!validateForm()) {
             return;
         }
@@ -90,6 +93,19 @@ public class SignUp extends AppCompatActivity {
                             // Sign in success, redirects to home page
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+
+                            // Update the User's display name
+                            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                    .setDisplayName(name).build();
+                            user.updateProfile(profileUpdates)
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                               @Override
+                                                               public void onComplete(@NonNull Task<Void> task) {
+                                                                   if (task.isSuccessful()) {
+                                                                       Log.d(TAG, "User profile updated.");
+                                                                   }
+                                                                }
+                                    });
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());

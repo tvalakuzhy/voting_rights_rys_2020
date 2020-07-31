@@ -10,15 +10,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
+import org.w3c.dom.Text;
+
 public class Settings extends AppCompatActivity {
     public static final String EXTRA_ADDRESS = "com.example.voting_rights_rys.ADDRESS";
     private FirebaseAuth mAuth;
+    private TextView userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,10 @@ public class Settings extends AppCompatActivity {
 
         //Initialize the Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+
+        //Initialize the Textview that holds the users name
+        userName = (TextView) findViewById(R.id.settings_username);
+        userName.setText(mAuth.getCurrentUser().getDisplayName());
 
         //Start a new activity when a nav bar item is selected
         bottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
