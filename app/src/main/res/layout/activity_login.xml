@@ -40,7 +40,7 @@
 
         <View
             android:layout_width="fill_parent"
-            android:layout_height="1px"
+            android:layout_height="1dp"
             android:background="@color/colorPrimaryLight" />
 
         <EditText
@@ -71,23 +71,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:buttonTint="@color/colorPrimaryLight"
                 android:checked="false"
                 android:text="Show Password"
-                android:buttonTint="@color/colorPrimaryLight"
                 android:textColor="@color/colorPrimaryLight"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/forgot_password"
-                android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:clickable="true"
                 android:gravity="end"
                 android:padding="5dp"
                 android:text="Forgot Password?"
                 android:textColor="@color/colorPrimaryLight"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:visibility="invisible" />
         </LinearLayout>
 
         <Button
@@ -105,12 +106,12 @@
 
     <TextView
         android:id="@+id/createAccount"
-        android:clickable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_layout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
+        android:clickable="true"
         android:gravity="center"
         android:padding="5dp"
         android:text="@string/register"

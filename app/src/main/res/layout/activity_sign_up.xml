@@ -18,7 +18,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/fullName"
+        android:id="@+id/reg_fullname"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -36,11 +36,11 @@
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="1px"
+        android:layout_height="1dp"
         android:background="@color/colorPrimaryLight" />
 
     <EditText
-        android:id="@+id/userEmailId"
+        android:id="@+id/reg_email"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -72,7 +72,7 @@
         android:background="@color/colorPrimaryLight" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/reg_password"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -80,7 +80,7 @@
         android:drawableLeft="@drawable/ic_outline_lock"
         android:drawablePadding="8dp"
         android:gravity="center_vertical"
-        android:hint="PASSWORD"
+        android:hint="PASSWORD (6 char minimum)"
         android:inputType="textPassword"
         android:padding="10dp"
         android:singleLine="true"
@@ -90,11 +90,11 @@
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="1px"
+        android:layout_height="1dp"
         android:background="@color/colorPrimaryLight" />
 
     <EditText
-        android:id="@+id/confirmPassword"
+        android:id="@+id/reg_confirmpass"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"

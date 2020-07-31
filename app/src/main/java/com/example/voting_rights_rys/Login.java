@@ -121,18 +121,13 @@ public class Login extends AppCompatActivity {
         }
 
         mAuth.signInWithEmailAndPassword(email, pass)
-                .addOnCompleteListener(
-                        new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(
                                     @NonNull Task<AuthResult> task)
                             {
                                 if (task.isSuccessful()) {
                                     Log.d(TAG, "Login is successful");
-                                    toastMessage("Successful Login");
-                                    // If login was successful, reroute to the main activity
-                                    Intent intent = new Intent(Login.this, MainActivity.class);
-                                    startActivity(intent);
                                 }
                                 else {
                                     // Signal that sign in has failed
