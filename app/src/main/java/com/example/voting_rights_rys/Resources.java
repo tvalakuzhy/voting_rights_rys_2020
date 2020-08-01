@@ -7,7 +7,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.browser.customtabs.CustomTabsIntent;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -27,6 +29,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Resources extends AppCompatActivity {
+    SharedPreferences sp;
     private FrameLayout fragContainer;
     private HashMap <String, ArrayList<Object>> states = new HashMap<>();
     HashMap<String, String> AbbvToState = new HashMap<>();
@@ -75,9 +78,13 @@ public class Resources extends AppCompatActivity {
             }
         });
         populateMap();
-//        System.out.println("STATE IG " + R.id.editTextTextState);
-        userState = (AbbvToState.get("DC")).toLowerCase();
-//        userState = AbbvToState.get(); // get state from settings page
+        // Get State from Settings Page
+        sp = getSharedPreferences("USER_STATE", Context.MODE_PRIVATE);
+        userState = sp.getString("state","");
+
+        // If it's empty, default it to NY. Otherwise, change it to the user state.
+        if(userState.equals("")) {userState = "new york";}
+        else {userState = (AbbvToState.get(userState.toUpperCase())).toLowerCase();}
     }
 
     public void populateMap() {
