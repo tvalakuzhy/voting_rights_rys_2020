@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -28,7 +29,9 @@ import java.util.HashMap;
 public class Resources extends AppCompatActivity {
     private FrameLayout fragContainer;
     private HashMap <String, ArrayList<Object>> states = new HashMap<>();
-    private String userState = "california"; // should be all lower case, get this from settings page
+    HashMap<String, String> AbbvToState = new HashMap<>();
+
+    private String userState; // should be all lower case, get this from settings page
     // Opens links within app
     CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
     CustomTabsIntent customTabsIntent = builder.build();
@@ -71,7 +74,66 @@ public class Resources extends AppCompatActivity {
                 return false;
             }
         });
+        populateMap();
+//        System.out.println("STATE IG " + R.id.editTextTextState);
+        userState = (AbbvToState.get("DC")).toLowerCase();
+//        userState = AbbvToState.get(); // get state from settings page
     }
+
+    public void populateMap() {
+        AbbvToState.put("AL","Alabama");
+        AbbvToState.put("AK","Alaska");
+        AbbvToState.put("AZ","Arizona");
+        AbbvToState.put("AR","Arkansas");
+        AbbvToState.put("CA", "California");
+        AbbvToState.put("CO","Colorado");
+        AbbvToState.put("CT","Connecticut");
+        AbbvToState.put("DE","Delaware");
+        AbbvToState.put("DC","District Of Columbia");
+        AbbvToState.put("FL","Florida");
+        AbbvToState.put("GA","Georgia");
+        AbbvToState.put("HI","Hawaii");
+        AbbvToState.put("ID","Idaho");
+        AbbvToState.put("IL","Illinois");
+        AbbvToState.put("IN","Indiana");
+        AbbvToState.put("IA","Iowa");
+        AbbvToState.put("KS","Kansas");
+        AbbvToState.put("KY","Kentucky");
+        AbbvToState.put("LA","Louisiana");
+        AbbvToState.put("ME","Maine");
+        AbbvToState.put("MD","Maryland");
+        AbbvToState.put("MA","Massachusetts");
+        AbbvToState.put("MI","Michigan");
+        AbbvToState.put("MN","Minnesota");
+        AbbvToState.put("MS","Mississippi");
+        AbbvToState.put("MO","Missouri");
+        AbbvToState.put("MT","Montana");
+        AbbvToState.put("NE","Nebraska");
+        AbbvToState.put("NV","Nevada");
+        AbbvToState.put("NH","New Hampshire");
+        AbbvToState.put("NJ","New Jersey");
+        AbbvToState.put("NM","New Mexico");
+        AbbvToState.put("NY","New York");
+        AbbvToState.put("NC","North Carolina");
+        AbbvToState.put("ND","North Dakota");
+        AbbvToState.put("OH","Ohio");
+        AbbvToState.put("OK","Oklahoma");
+        AbbvToState.put("OR","Oregon");
+        AbbvToState.put("PA","Pennsylvania");
+        AbbvToState.put("RI","Rhode Island");
+        AbbvToState.put("SC","South Carolina");
+        AbbvToState.put("SD","South Dakota");
+        AbbvToState.put("TN","Tennessee");
+        AbbvToState.put("TX","Texas");
+        AbbvToState.put("UT","Utah");
+        AbbvToState.put("VT","Vermont");
+        AbbvToState.put("VA","Virginia");
+        AbbvToState.put("WA","Washington");
+        AbbvToState.put("WV","West Virginia");
+        AbbvToState.put("WI","Wisconsin");
+        AbbvToState.put("WY","Wyoming");
+    }
+
     //Called when button clicked
     public void validID(View view){
         /**Note: Still give option to see valid forms of id for other states as it will vary
