@@ -3,7 +3,9 @@ package com.example.voting_rights_rys;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,10 +16,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Settings extends AppCompatActivity {
     public static final String EXTRA_ADDRESS = "com.example.voting_rights_rys.ADDRESS";
+    SharedPreferences sp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        sp = getSharedPreferences("USER_STATE", Context.MODE_PRIVATE);
 
         //Initialize bottom nav bar and select "Settings"
         BottomNavigationView bottomNavView = findViewById(R.id.bot_nav);
@@ -104,6 +110,11 @@ public class Settings extends AppCompatActivity {
         String sCity = city.getText().toString();
         String sState = state.getText().toString();
         String sZip = zip.getText().toString();
+
+        // Save user state in shared preferences
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putString("state",sState);
+        editor.commit();
 
 
         //Validate address using address verification API
