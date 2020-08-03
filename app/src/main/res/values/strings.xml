@@ -29,6 +29,6 @@
     <string name="channel_name">electionNotification</string>
     <string name="channel_description">Allow for election notifications</string>
 
-    <string name="pollingplace"> Your polling place: </string>
-    <string name="upcomingElec"> Your next election: </string>
+    <string name="pollingplace"> Your Polling Place </string>
+    <string name="upcomingElec"> Upcoming Election </string>
 </resources>
