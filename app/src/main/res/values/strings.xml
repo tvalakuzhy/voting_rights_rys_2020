@@ -28,4 +28,7 @@
     <string name="YOUR_API_KEY">AIzaSyCdkZV6pD8BXJByaz5CCYdqURAZKAawvlY</string>
     <string name="channel_name">electionNotification</string>
     <string name="channel_description">Allow for election notifications</string>
+
+    <string name="pollingplace"> Your polling place: </string>
+    <string name="upcomingElec"> Your next election: </string>
 </resources>
