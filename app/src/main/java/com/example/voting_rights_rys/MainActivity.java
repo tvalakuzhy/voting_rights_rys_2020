@@ -59,8 +59,7 @@ public class MainActivity extends AppCompatActivity {
             nextElec.setText(election_info);
         }
         else {
-            nextElec.setText("You have no upcoming elections at this time." + "\n" + "Please check your address or try again later.");
-
+            nextElec.setText("You have no upcoming elections at this time. Please check your address or try again later.");
         }
 
         //Start a new activity when a nav bar item is selected
